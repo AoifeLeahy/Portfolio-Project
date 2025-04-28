@@ -2,6 +2,12 @@
     import Header from '$lib/components/Header.svelte';
     import Footer from '$lib/components/Footer.svelte';
 </script>
+<svelte:head>
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</svelte:head>
 
 <Header />
 
@@ -11,13 +17,22 @@
 </main>
 
 <Footer />
-
 <style>
+    :global(html, body) {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 100%;
+    }
+    
+    :global(h1, h2, h3, h4, h5, h6) {
+        font-family: 'Italiana', serif;
+        font-weight: 400;
+    }
     
     main {
-        padding: 2rem;
-        text-align: center;
         min-height: 80vh;
+        width: 100%;
+        background-color: rgb(235, 245, 255);
     }
-
 </style>

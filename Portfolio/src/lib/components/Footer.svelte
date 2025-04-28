@@ -11,5 +11,6 @@
         padding: 1rem;
         bottom: 0;
         width: 100%;
+        font-family: 'Italiana', serif;
     }
 </style>

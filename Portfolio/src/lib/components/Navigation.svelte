@@ -50,7 +50,7 @@
         width: 100%;
         padding: 0;
         position: relative;
-        min-height: 50px; 
+        min-height: 55px; 
         max-width: 100%; 
         margin: 0 auto; 
     }
@@ -70,16 +70,16 @@
     }
     
     .main-nav-links li {
-        margin-right: 15px;
+        margin-right: 40px;
     }
     
     .main-nav-links a {
         color: rgb(0, 0, 0); 
         text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 600;
         padding: 8px 16px;
-        border-radius: 4px;
+        border-radius: 16px;
         transition: all 0.3s ease;
         background-color: #aebdd7; 
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
@@ -123,6 +123,8 @@
         z-index: 30; 
         border-radius: 4px; 
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        font-size: 18px;
+        border-radius: 12px;
     }
     
     .hamburger-button:hover {
@@ -138,7 +140,7 @@
         right: 0;
         width: 180px;
         background-color: #ffee8b;
-        border-radius: 6px;
+        border-radius: 16px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
         overflow: hidden;
         z-index: 25; 

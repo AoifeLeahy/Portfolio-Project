@@ -11,22 +11,27 @@
 
 <style>
     header {
-        display: flex; /* Change to flex for better layout control */
-        background-color: rgb(93, 95, 164);
+        display: flex; /* Use flex for layout */
+        background-color: rgb(93, 95, 164); 
         color: rgb(255, 255, 255);
-        padding: 0.7rem 1rem; /* Increased padding for better spacing */
+        padding: 0.5rem 1rem; /* Slightly reduced padding */
         transition: all 0.3s ease-in-out;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
-        position: relative;
-        z-index: 10; /* Simplified z-index */
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+        position: fixed; /* Fixed position at top */
+        top: 0; /* Start exactly at the top */
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Very high z-index to ensure it stays on top */
         width: 100%;
-        box-sizing: border-box; /* Ensure padding is included in width calculation */
-        min-height: 70px; /* Increased minimum height for better visibility */
-        align-items: center; /* Center items vertically */
+        box-sizing: border-box;
+        min-height: 70px; 
+        align-items: center;
+        margin: 0; 
+        border: none; 
+        font-family: 'Italiana', serif;
+        box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
+
     }
-    /* Remove nav-container since we're directly using Navigation in header */
-    
-    /* Responsive adjustments for mobile */
     @media (max-width: 768px) {
         header {
             padding: 0.4rem; /* Consistent padding all around */
