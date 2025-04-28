@@ -99,9 +99,9 @@
     }
 
     .box2 img {
-    width: 80%;
-    height: 80%;
-    border-radius: 18px; /* Match the box's rounded corners */
+        width: 80%;
+        height: 80%;
+        border-radius: 18px; /* Match the box's rounded corners */
     }
     
    

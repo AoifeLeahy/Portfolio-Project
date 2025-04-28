@@ -20,9 +20,9 @@
     <!-- Left side navigation with button links -->
     <div class="main-nav">
         <ul class="main-nav-links"> 
-            <li><a href="{base}/" class:active={$page.url.pathname === base || $page.url.pathname === '/'}>Home</a></li>
-            <li><a href="{base}/about" class:active={$page.url.pathname === `${base}/about`}>About Me</a></li>
-            <li><a href="{base}/contact" class:active={$page.url.pathname === `${base}/contact`}>Cv</a></li>
+            <li><a href={base + '/'} class:active={$page.url.pathname === base || $page.url.pathname === '/'}>Home</a></li>
+            <li><a href={base + '/About_me'} class:active={$page.url.pathname === base + '/About_me'}>About Me</a></li>
+            <li><a href={base + '/Cv'} class:active={$page.url.pathname === base + '/Cv'}>Cv</a></li>
         </ul>
     </div>
 
@@ -34,9 +34,9 @@
         
         <!-- Dropdown content with animation -->
         <div class="dropdown-content" class:active={isDropdownOpen}>
-            <a href="{base}/animation" on:click={closeDropdown} class:active={$page.url.pathname === `${base}/animation`}>Animation</a>
-            <a href="{base}/art" on:click={closeDropdown} class:active={$page.url.pathname === `${base}/art`}>Art</a>
-            <a href="{base}/games" on:click={closeDropdown} class:active={$page.url.pathname === `${base}/games`}>Games</a>
+            <a href={base + '/animation'} on:click={closeDropdown} class:active={$page.url.pathname === `${base}/animation`}>Animation</a>
+            <a href={base + '/art'} on:click={closeDropdown} class:active={$page.url.pathname === `${base}/art`}>Art</a>
+            <a href={base + '/games'} on:click={closeDropdown} class:active={$page.url.pathname === `${base}/games`}>Games</a>
         </div>
     </div>
 </nav>
@@ -167,8 +167,9 @@
         padding: 12px 16px;
         color: rgb(0, 0, 0);
         text-decoration: none;
-        text-align: left;
+        text-align: center;
         font-size: 16px;
+        font-weight: 600;
         transition: background-color 0.2s ease;
     }
     
@@ -178,7 +179,7 @@
     
     /* Add dividers between dropdown items */
     .dropdown-content a:not(:last-child) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.779);
     }
     
     /* Style for hovering and active dropdown items */
