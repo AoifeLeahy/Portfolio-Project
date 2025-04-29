@@ -7,10 +7,14 @@
 </script>
 
 <div class="cv-container">
-    <!-- Background Box behind box2 -->
+
+    <!-- svelte-ignore a11y_img_redundant_alt -->
+    <img src="/picture.jpg" alt="Photo of Aoife" class="picture"/>
+   
     <div class="background-box"></div>
 
     <div class="picture-box"></div>
+    <div class="picture-box2"></div>
 
     <div class="box">
         <h1>Aoife Leahy</h1>
@@ -22,10 +26,43 @@
         <p>I am continuously learning new things by experimenting with different aspects of art. By doing this, I am constantly improving and making my performance strengthen.</p>
         <p>This portfolio shows my past projects and gives a brief look into my ongoing journey.</p>
     </div>
-     <h2>You can find me below:</h2>
+     <h2>You can find me below:</h2> 
+     <img src="/gmail.png" alt="Gmail logo" class="logo1"/>
+     <h3>aoifeleahy.kk@gmail.com</h3>
+
+     <img src="/github.png" alt="Github logo" class="logo2"/>
+     <h4>https://github.com/AoifeLeahy</h4>
 </div>
 
 <style>
+
+.picture {
+    position: absolute;
+    top: 170px; 
+    right: 170px; 
+    width: 200px; 
+    height: 260px;
+    z-index: 2; 
+    padding: 30px; 
+    object-fit: cover; 
+    border-radius: 20px; 
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.picture-box2 {
+    position: absolute;
+    top: 184px; 
+    right: 182px; 
+    width: 175px; 
+    height: 230px;
+    z-index: 1; 
+    padding: 30px; 
+    object-fit: cover; 
+    border-radius: 20px;
+    background-color: #fdf7d1; 
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); 
+}
+
 .cv-container {
     display: flex;
     flex-direction: column;
@@ -39,11 +76,11 @@
 
 .picture-box {
     position: absolute;
-    top: 175px; /* Adjusted to be behind box2 */
-    right: 70px; /* Position to match the left margin of box2 */
+    top: 170px; /* Adjusted to be behind box2 */
+    right: 170px; /* Position to match the left margin of box2 */
     width: 200px; /* Larger width to match size of box2 */
-    height: 120px;
-    background-color: #fff2aa; /* Lighter color for contrast */
+    height: 260px;
+    background-color: #fff2aa;  /* Lighter color for contrast */
     border-radius: 25px; /* Rounded corners */
     z-index: 0; /* Ensures it's behind the content */
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
@@ -53,8 +90,8 @@
 .background-box {
     position: absolute;
     top: 170px; /* Adjusted to be behind box2 */
-    left: 70px; /* Position to match the left margin of box2 */
-    width: 610px; /* Larger width to match size of box2 */
+    left: 90px; /* Position to match the left margin of box2 */
+    width: 650px; /* Larger width to match size of box2 */
     height: 260px;
     background-color: #fff2aa; /* Lighter color for contrast */
     border-radius: 25px; /* Rounded corners */
@@ -70,11 +107,11 @@
     text-align: center;
     width: auto; 
     max-width: 220px; 
-    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.1); 
     font-size: 13px;
     margin-bottom: 23px; 
     margin-top: 80px;
-    margin-left: 70px;
+    margin-left: 90px;
     z-index: 1;
 }
 
@@ -84,12 +121,12 @@
     padding: 0.1rem 1rem;  
     text-align: center;
     width: auto; 
-    max-width: 600px; 
+    max-width: 640px; 
     box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
     font-size: 13px;
     margin-bottom: 30px; 
     margin-top: 20px;
-    margin-left: 90px;
+    margin-left: 110px;
     z-index: 1;
 }
 
@@ -101,8 +138,8 @@ h1 {
 h2 {
     font-weight: 600;
     font-size: 20px;
-    margin-bottom: 100px;
-    margin-left: 90px;
+    margin-bottom: 20px;
+    margin-left: 100px;
     text-align: left;
 }
 
@@ -111,4 +148,38 @@ p {
     font-family: 'Italiana', serif;
   
 }
+
+.logo1 {
+    margin-top: 0px;
+    height: 50px;
+    width: 70px;
+    margin-left: 90px;
+}
+
+h3 {
+    margin-top: -38px;
+    height: 50px;
+    width: 70px;
+    margin-bottom: 0px;
+    margin-left: 190px;
+    font-size: 23px;
+}
+
+.logo2 {
+    margin-top: -70px; 
+    margin-left: 35rem; 
+    height: 50px;  
+    width: 70px;   
+    margin-bottom: 100px;
+}
+
+h4 {
+    margin-top: -128px;
+    height: 50px;
+    width: 300px;
+    margin-bottom: 100px;
+    margin-left: 680px;
+    font-size: 23px;
+}
+
 </style>
