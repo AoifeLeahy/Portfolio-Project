@@ -61,6 +61,10 @@
     border-radius: 20px;
     background-color: #fdf7d1; 
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); 
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
+    
 }
 
 .cv-container {
@@ -76,28 +80,34 @@
 
 .picture-box {
     position: absolute;
-    top: 170px; /* Adjusted to be behind box2 */
-    right: 170px; /* Position to match the left margin of box2 */
-    width: 200px; /* Larger width to match size of box2 */
+    top: 170px; 
+    right: 170px; 
+    width: 200px;
     height: 260px;
-    background-color: #fff2aa;  /* Lighter color for contrast */
-    border-radius: 25px; /* Rounded corners */
-    z-index: 0; /* Ensures it's behind the content */
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
-    padding: 30px; /* Adds padding to ensure it covers the background */
+    background-color: #fff2aa;  
+    border-radius: 25px;
+    z-index: 0; 
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); 
+    padding: 30px; 
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
 }
 
 .background-box {
     position: absolute;
-    top: 170px; /* Adjusted to be behind box2 */
-    left: 90px; /* Position to match the left margin of box2 */
-    width: 650px; /* Larger width to match size of box2 */
+    top: 170px; 
+    left: 90px; 
+    width: 650px; 
     height: 260px;
-    background-color: #fff2aa; /* Lighter color for contrast */
-    border-radius: 25px; /* Rounded corners */
-    z-index: 0; /* Ensures it's behind the content */
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
-    padding: 30px; /* Adds padding to ensure it covers the background */
+    background-color: #fff2aa;
+    border-radius: 25px; 
+    z-index: 0; 
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); 
+    padding: 30px; 
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
 }
 
 .box {
@@ -113,6 +123,9 @@
     margin-top: 80px;
     margin-left: 90px;
     z-index: 1;
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
 }
 
 .box2 {
@@ -128,6 +141,9 @@
     margin-top: 20px;
     margin-left: 110px;
     z-index: 1;
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
 }
 
 h1 {

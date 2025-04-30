@@ -1,145 +1,111 @@
-<script> 
-    import { onMount } from 'svelte';
+<script>
+	import { onMount } from 'svelte';
 
-    onMount(() => {
-        console.log("Home Page Loaded");
-    });
+	onMount(() => {
+		console.log("Home Page Loaded");
+	});
 </script>
 
 <div class="home-page">
-    <div class="box-container">
-        <div class="box1">
-            <h1>Aoife Leahy</h1>
-        </div>
-        
-        <div class="box2">
-            <!-- svelte-ignore a11y_img_redundant_alt -->
-            <img src="/background.png" alt="Forest Image" />
-        </div>
-    </div>
+	<div class="box-container">
+		<div class="box1">
+			<h1>Aoife Leahy</h1>
+		</div>
+
+		<div class="box2">
+			<img src="/background.png" alt="Forest background" />
+		</div>
+	</div>
 </div>
 
 <style>
-    /* Container styling */
-    .home-page {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 80vh;
-        margin-top: 30px; /* Space for fixed header */
-        padding: 2rem 0;
-        width: 100%;
-        height: 35rem;
-    }
-    
-    .box-container {
-        width: 85%;
-        max-width: 1200px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 180px; /* Spacing between boxes */
-        padding: 0 20px;
-    }
-   
-    /* Box 1 - Name box */
-    .box1 {
-        background-color: #fff2aa;
-        border-radius: 18px;
-        padding: 1.5rem 2.5rem;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        transition: transform 0.35s ease, box-shadow 0.35s ease;
-        width: auto;
-        margin-left: 70px;
-        box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
-        border-style: dashed;
-        border-width: 2.5px;
-        border-color: white;
-    }
-    
-    .box1:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-    }
-    
-    /* Box 2 - Image box */
-    .box2 {
-        flex: 1;
-        background-color: #fff2aa;
-        border-radius: 18px;
-        padding: 0;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        min-height: 270px;
-        min-width: 200px;
-        transition: transform 0.35s ease, box-shadow 0.35s ease;
-        box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
-        border-style: dashed;
-        border-width: 2.5px;
-        border-color: white;
-    }
-    
-    .box2:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-    }
-    
-    /* Typography with custom fonts */
-    h1 {
-        color: #000;
-        font-size: 2.7rem;
-        margin: 0;
-        padding: 0;
-        font-weight: 400; 
-        letter-spacing: 0.01em;
-        font-family: 'Italiana', serif;
-    }
 
-    .box2 img {
-        width: 80%;
-        height: 80%;
-        border-radius: 18px; /* Match the box's rounded corners */
-    }
-    
-   
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .home-page {
-            padding: 1rem 0;
-            margin-top: 80px;
-        }
-        
-        .box-container {
-            flex-direction: column;
-            width: 100%;
-            gap: 40px;
-        }
-        
-        .box1 {
-            padding: 1rem 2rem;
-            margin-bottom: 20px;
-        }
-        
-        .box2 {
-            width: 100%;
-            padding: 0;
-            min-height: 180px;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-        }
-        
-       
-    }
+.home-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 2rem;
+	box-sizing: border-box;
+	background-color: rgb(244, 250, 255);
+}
+
+.box-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 1000px;
+	width: 100%;
+	gap: 2rem;
+}
+
+
+.box1 {
+	background-color: #fff2aa;
+	border: 2.5px dashed white;
+	border-radius: 16px;
+	padding: 1.5rem 2rem;
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	flex: 1 1 300px;
+	max-width: 400px;
+}
+
+.box1 h1 {
+	font-family: 'Italiana', serif;
+	font-size: clamp(1.6rem, 4vw, 2.7rem);
+	margin: 0;
+	
+}
+
+
+.box2 {
+	background-color: #fff2aa;
+	border: 2.5px dashed white;
+	border-radius: 16px;
+	padding: 1rem;
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+	flex: 1 1 300px;
+	max-width: 450px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box2 img {
+	width: 100%;
+	max-height: 280px;
+	border-radius: 12px;
+	object-fit: cover;
+}
+
+/* Smaller screen tweaks */
+@media (max-width: 768px) {
+	.home-page {
+		padding: 1.5rem 1rem;
+	}
+
+	.box-container {
+		flex-direction: column;
+	}
+
+	.box1, .box2 {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+	.box1  {
+		font-size: 1rem;
+	}
+
+	.box2 img {
+		max-height: 180px;
+	}
+
+
+
+}
 </style>
