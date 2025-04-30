@@ -24,6 +24,7 @@
         height: 100%;
         box-sizing: border-box;
         height: 100%;
+        background-color: rgb(244, 250, 255);
     }
     
     :global(h1, h2, h3, h4, h5, h6) {

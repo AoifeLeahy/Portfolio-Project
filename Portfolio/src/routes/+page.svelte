@@ -57,6 +57,9 @@
         width: auto;
         margin-left: 70px;
         box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
+        border-style: dashed;
+        border-width: 2.5px;
+        border-color: white;
     }
     
     .box1:hover {
@@ -80,6 +83,9 @@
         min-width: 200px;
         transition: transform 0.35s ease, box-shadow 0.35s ease;
         box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
+        border-style: dashed;
+        border-width: 2.5px;
+        border-color: white;
     }
     
     .box2:hover {
