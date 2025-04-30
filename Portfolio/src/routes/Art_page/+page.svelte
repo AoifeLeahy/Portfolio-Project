@@ -60,6 +60,10 @@
     font-size: 13px;
     margin-bottom: 0px; 
     margin-top: 60px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added shadow */
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
 }
 
 .box-container {
@@ -86,6 +90,9 @@
     justify-content: center;
     align-items: center;
     margin-top: -250px;
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
 }
 
 .under-box {
@@ -98,6 +105,9 @@
     display: flex;
     justify-content: left;
     padding-top: 0px; /* control how high the text sits */
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
 }
 
 .art {

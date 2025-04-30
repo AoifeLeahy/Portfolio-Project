@@ -13,8 +13,34 @@
 </div>
 
 <div class="box-container">
-    <div class="background-box"></div>
-    <div class="background-box"></div>
+   
+    <div class="box-with-image">
+        <div class="background-box">
+            <!-- svelte-ignore a11y_media_has_caption -->
+            <video class="art1" controls>
+                <source src="UFO.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="under-box">
+            <p>07-11-2025</p>
+            <p class="description">For this assignment, I had to design and create a spaceship and a city background. I then had to animate the spaceship to kidnap a person.</p>
+        </div> 
+    </div>
+
+    <div class="box-with-image">
+        <div class="background-box">
+            <!-- svelte-ignore a11y_media_has_caption -->
+            <video class="art2" controls>
+                <source src="walk.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="under-box">
+            <p>03-12-2024</p>
+            <p class="description">I had to take my character that I had already designed previously and animate it walking. The background was created by me also.</p>
+        </div> 
+    </div>
 </div>
 
 
@@ -31,7 +57,6 @@
     margin-top: 0;
 }
 
-
 .box {
     background-color: #fff2aa;
     border-radius: 18px;
@@ -43,13 +68,24 @@
     font-size: 13px;
     margin-bottom: 0px; 
     margin-top: 60px;
-    }
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added shadow */
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
+}
 
 .box-container {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 0px;
+    margin-top: 0px; /* Keep this at 0 to preserve initial placement */
+}
+
+.box-with-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .background-box {
@@ -58,9 +94,61 @@
     background-color: #fff2aa;
     border-radius: 25px;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: -250px;
-    margin-bottom: 100px;
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
 }
 
+.under-box {
+    width: 500px;
+    height: 113px;
+    background-color: #fdf7d1;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: left;
+    padding-top: 0px; /* control how high the text sits */
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
+}
+
+.art1 {
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.art2 {
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+p {
+    padding-left: 20px;
+    font-family: 'Italiana', serif;
+    font-weight: 600;
+    font-size: 19px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.description {
+    font-family: 'Italiana', serif;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-left: -110px;
+    font-weight: 100;
+    width: 95%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
 
 </style>

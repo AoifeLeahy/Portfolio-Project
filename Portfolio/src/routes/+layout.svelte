@@ -33,6 +33,6 @@
     
     main {
         min-height: 100vh;
-        background-color: rgb(235, 245, 255);
+        background-color: rgb(244, 250, 255);
     }
 </style>
