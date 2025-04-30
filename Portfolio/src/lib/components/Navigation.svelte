@@ -34,9 +34,9 @@
         
         <!-- Dropdown content with animation -->
         <div class="dropdown-content" class:active={isDropdownOpen}>
-            <a href={base + '/animation'} on:click={closeDropdown} class:active={$page.url.pathname === `${base}/animation`}>Animation</a>
-            <a href={base + '/art'} on:click={closeDropdown} class:active={$page.url.pathname === `${base}/art`}>Art</a>
-            <a href={base + '/games'} on:click={closeDropdown} class:active={$page.url.pathname === `${base}/games`}>Games</a>
+            <a href={base + '/Animation_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/animation'}>Animation</a>
+            <a href={base + '/Art_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/Art_page'}>Art</a>
+            <a href={base + '/Games_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/Games_page'}>Games</a>
         </div>
     </div>
 </nav>

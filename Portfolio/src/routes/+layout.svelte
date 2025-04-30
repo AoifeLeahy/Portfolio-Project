@@ -21,6 +21,7 @@
     :global(html, body) {
         margin: 0;
         padding: 0;
+        height: 100%;
         box-sizing: border-box;
         height: 100%;
     }
@@ -31,8 +32,7 @@
     }
     
     main {
-        min-height: 80vh;
-        width: 100%;
+        min-height: 100vh;
         background-color: rgb(235, 245, 255);
     }
 </style>

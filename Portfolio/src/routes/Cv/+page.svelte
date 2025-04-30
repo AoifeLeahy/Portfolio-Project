@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
 
     onMount(() => {
-        console.log("About me Page Loaded");
+        console.log("Cv Page Loaded");
     });
 </script>
 
