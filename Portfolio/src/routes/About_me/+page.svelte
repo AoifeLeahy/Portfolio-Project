@@ -198,4 +198,75 @@ h4 {
     font-size: 23px;
 }
 
+/* Responsiveness*/
+
+@media (max-width: 1245px) {
+  .cv-container {
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .picture,
+  .picture-box,
+  .picture-box2,
+  .background-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 2.5rem auto;
+    width: 150px;
+    height: 190px;
+    padding: 0;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .picture-box,
+  .picture-box2 {
+    display: none; /* hide extra framing on small screens */
+  }
+
+  .background-box {
+    display: none; /* or adjust to wrap text if preferred */
+  }
+
+  .box {
+    margin: 1rem auto;
+    max-width: 80%;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .box2 {
+    margin: 1rem auto;
+    max-width: 90%;
+    font-size: 16px;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #fdf7d1;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+  }
+
+  h2, h3, h4 {
+    margin: 1rem auto;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .logo1,
+  .logo2 {
+    margin: 1rem auto;
+    text-align: left;
+  }
+
+  
+
+ 
+ 
+}
+
+
 </style>

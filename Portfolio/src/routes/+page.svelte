@@ -26,13 +26,11 @@
 	align-items: center;
 	min-height: 100vh;
 	padding: 2rem;
-	box-sizing: border-box;
 	background-color: rgb(244, 250, 255);
 }
 
 .box-container {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	max-width: 1000px;
@@ -41,37 +39,23 @@
 }
 
 
-.box1 {
+.box1, .box2 {
 	background-color: #fff2aa;
 	border: 2.5px dashed white;
 	border-radius: 16px;
-	padding: 1.5rem 2rem;
 	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
-	text-align: center;
-	flex: 1 1 300px;
-	max-width: 400px;
 }
 
-.box1 h1 {
+.box1 {
 	font-family: 'Italiana', serif;
-	font-size: clamp(1.6rem, 4vw, 2.7rem);
+	font-size: 22px;
 	margin: 0;
-	
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
 }
-
 
 .box2 {
-	background-color: #fff2aa;
-	border: 2.5px dashed white;
-	border-radius: 16px;
 	padding: 1rem;
-	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
-	flex: 1 1 300px;
 	max-width: 450px;
-	box-sizing: border-box;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .box2 img {
@@ -97,15 +81,13 @@
 }
 
 @media (max-width: 480px) {
-	.box1  {
-		font-size: 1rem;
-	}
-
-	.box2 img {
+	.box2 img  {
 		max-height: 180px;
 	}
 
-
-
+	.box-container {
+		flex-direction: column;
+        align-items: center;
+	}
 }
 </style>
