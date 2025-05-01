@@ -27,14 +27,19 @@
         <p>This portfolio shows my past projects and gives a brief look into my ongoing journey.</p>
     </div>
      <h2>You can find me below:</h2> 
-     <img src="/gmail.png" alt="Gmail logo" class="logo1"/>
-     <h3>aoifeleahy.kk@gmail.com</h3>
-
-     <img src="/github.png" alt="Github logo" class="logo2"/>
-     <h4>https://github.com/AoifeLeahy</h4>
+     <div class="contact-item">
+        <img src="/gmail.png" alt="Gmail logo" class="logo1" />
+        <h3>aoifeleahy.kk@gmail.com</h3>
+    </div>
+    
+    <div class="contact-item">
+        <img src="/github.png" alt="Github logo" class="logo2" />
+        <h4>https://github.com/AoifeLeahy</h4>
+    </div>
 </div>
-
 <style>
+
+
 
 .picture {
     position: absolute;
@@ -169,33 +174,37 @@ p {
     margin-top: 0px;
     height: 50px;
     width: 70px;
-    margin-left: 90px;
+    margin-left: -1000px;
 }
 
 h3 {
+    font-size: 23px;
+    font-weight: 100;
     margin-top: -38px;
-    height: 50px;
-    width: 70px;
     margin-bottom: 0px;
     margin-left: 190px;
-    font-size: 23px;
+    text-align: left;
+    max-width: 90%;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .logo2 {
-    margin-top: -70px; 
-    margin-left: 35rem; 
+    margin-top: -50px; 
+    margin-left: -2rem; 
     height: 50px;  
     width: 70px;   
     margin-bottom: 100px;
 }
 
 h4 {
-    margin-top: -128px;
+    margin-top: -130px;
     height: 50px;
     width: 300px;
     margin-bottom: 100px;
     margin-left: 680px;
     font-size: 23px;
+    font-weight: 100;
 }
 
 /* Responsiveness*/
@@ -209,8 +218,7 @@ h4 {
 
   .picture,
   .picture-box,
-  .picture-box2,
-  .background-box {
+  .picture-box2 {
     position: relative;
     top: auto;
     left: auto;
@@ -250,10 +258,21 @@ h4 {
     text-align: left;
   }
 
-  h2, h3, h4 {
+  .background-box {
+    margin: 1rem auto;
+    max-width: 100%;
+    font-size: 16px;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #fdf7d1;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+  }
+
+  h2 {
     margin: 1rem auto;
     font-size: 20px;
-    text-align: left;
+    
   }
 
   .logo1,
@@ -262,8 +281,28 @@ h4 {
     text-align: left;
   }
 
-  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    max-width: 90%;
+}
 
+.contact-item img {
+    height: 40px;
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.contact-item h3, .contact-item h4 {
+    margin: 0;
+    font-size: 20px;
+    word-break: break-word;  /* ensure long lines break */
+    overflow-wrap: break-word;
+    flex: 1;
+}
  
  
 }
