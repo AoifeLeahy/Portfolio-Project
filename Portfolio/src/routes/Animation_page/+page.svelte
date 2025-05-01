@@ -162,7 +162,7 @@ p {
 @media (max-width: 1268px) {
     .box-container {
         flex-direction: column;
-        margin-top: -500px;
+        margin-top: -550px;
         margin-bottom: 100px;
         align-items: center;  /* Center all child elements horizontally */
         gap: 60px;            /* Optional: Adds space between the two boxes */

@@ -143,4 +143,53 @@ p {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added shadow */
 }
 
+@media (max-width: 1268px) {
+    .box-container {
+        gap: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1268px) {
+    .box-container {
+        flex-direction: column;
+        margin-top: -550px;
+        margin-bottom: 100px;
+        align-items: center;  /* Center all child elements horizontally */
+        gap: 60px;            /* Optional: Adds space between the two boxes */
+    }
+
+    .box-with-image {
+        max-width: 100%;
+        align-items: center;
+        height: auto;
+        padding: 15px;
+    }
+
+    .background-box,
+    .under-box {
+        width: 100%;
+        height: auto;
+        max-width: 500px;     /* Keeps layout from becoming too wide on tablets */
+        margin: 0 auto;       /* Center horizontally */
+    }
+
+    .art,
+    .art2 {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .description {
+        margin-left: -10;
+        text-align: left;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
 </style>
