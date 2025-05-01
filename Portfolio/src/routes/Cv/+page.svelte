@@ -37,6 +37,9 @@
         font-size: 13px;
         margin-bottom: 23px; 
         margin-top: 80px;
+        border-style: dashed;
+        border-width: 2.5px;
+        border-color: white;
     }
 
     .cv_page1 {
@@ -52,4 +55,6 @@
         max-width: 600px; 
         margin-bottom: 100px;
     }
+
+   
 </style>

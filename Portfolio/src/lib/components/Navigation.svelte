@@ -109,17 +109,10 @@
     .hamburger-button {
         background: #aebdd7; 
         border: none;
-        cursor: pointer;
         padding: 8px; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 40px; 
         height: 40px; 
         transition: all 0.3s ease;
-        outline: none; 
-        position: relative; 
         z-index: 30; 
         border-radius: 4px; 
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
@@ -143,14 +136,10 @@
         border-radius: 16px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
         overflow: hidden;
-        z-index: 25; 
-        
-        /* Animation properties */
+        z-index: 25;
         max-height: 0;
-        opacity: 0;
         transform: translateY(-10px);
         transition: all 0.3s ease-in-out;
-        pointer-events: none; 
     }
     
     /* Dropdown content active state */
@@ -158,7 +147,7 @@
         max-height: 200px;
         opacity: 1;
         transform: translateY(0);
-        pointer-events: auto; 
+      
     }
     
     /* Dropdown content links */
@@ -186,4 +175,5 @@
     .dropdown-content a:hover, .dropdown-content a.active {
         background-color: rgba(255, 255, 255, 0.2);
     }
+    
 </style>
