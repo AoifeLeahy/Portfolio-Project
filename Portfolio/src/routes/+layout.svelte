@@ -1,6 +1,5 @@
 <script>
     import Header from '$lib/components/Header.svelte';
-    import Footer from '$lib/components/Footer.svelte';
 </script>
 <svelte:head>
     <!-- Google Fonts Import -->
@@ -16,7 +15,6 @@
     <slot />
 </main>
 
-<Footer />
 <style>
     :global(html, body) {
         margin: 0;

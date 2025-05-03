@@ -51,7 +51,7 @@
         padding: 0;
         position: relative;
         min-height: 55px; 
-        max-width: 100%; 
+        width: 100%; 
         margin: 0 auto; 
     }
     
@@ -175,5 +175,44 @@
     .dropdown-content a:hover, .dropdown-content a.active {
         background-color: rgba(255, 255, 255, 0.2);
     }
+
+    @media (max-width: 400px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2px;
+        
+    }
+
+    .main-nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 4px;
+        margin-top: 10px;
+        margin-bottom: -20px;
+    }
+
+    .main-nav-links li {
+        margin: 0;
+    }
+
+    .main-nav-links a {
+        font-size: 17px;
+        padding: 6px 10px;
+    }
+
+    .hamburger-button {
+        width: 36px;
+        height: 36px;
+        margin-top: 12px;
+        font-size: 16px;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        width: 100px;
+    }
+}
+
     
 </style>

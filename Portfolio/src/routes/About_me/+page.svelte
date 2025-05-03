@@ -11,15 +11,15 @@
     <!-- svelte-ignore a11y_img_redundant_alt -->
     <img src="/picture.jpg" alt="Photo of Aoife" class="picture"/>
    
-    <div class="background-box"></div>
+    <div class="description-framing-box"></div>
 
     <div class="picture-box"></div>
     <div class="picture-box2"></div>
 
-    <div class="box">
+    <div class="name-box">
         <h1>Aoife Leahy</h1>
     </div>
-    <div class="box2">
+    <div class="about-me-text-box">
         <p>I am currently a student studying Interactive Digital Art and Design in SETU Carlow. </p>
         <p>I love to create characters through animation and concept art. I thrive in bringing the characters to life through stories and background images. Art has always been a big part of my life and I am very passionate towards it.</p>
         <p>In the past couple of years, I have started to design games and experiment with game mechanics. With this new skill obtained, I have been able to mix this with my art skills to create some visually pleasing games.</p>
@@ -42,98 +42,137 @@
 
 
 .picture {
+    /*Layout*/
     position: absolute;
     top: 170px; 
-    right: 170px; 
-    width: 200px; 
-    height: 260px;
+    right: 170px;  
     z-index: 2; 
     padding: 30px; 
-    object-fit: cover; 
-    border-radius: 20px; 
+    object-fit: cover;
+
+    /*Size*/
+    width: 200px; 
+    height: 260px;
+
+    /*Border*/
+    border-radius: 20px;
+    
+    /*Styling*/
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); 
 }
 
 .picture-box2 {
+    /*Layout*/
     position: absolute;
     top: 184px; 
     right: 182px; 
-    width: 175px; 
-    height: 230px;
     z-index: 1; 
     padding: 30px; 
     object-fit: cover; 
+
+    /*Size*/
+    width: 175px; 
+    height: 230px;
+
+    /*Border*/
     border-radius: 20px;
-    background-color: #fdf7d1; 
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); 
     border-style: dashed;
     border-width: 2.5px;
     border-color: white;
-    
+
+    /*Styling*/
+    background-color: #fdf7d1; 
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .cv-container {
+    /*Layout*/
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    min-height: 100vh; 
     text-align: center;
     margin-top: 30px;
     position: relative;
+
+    /*Size*/
+    min-height: 100vh; 
 }
 
 .picture-box {
+    /*Layout*/
     position: absolute;
     top: 170px; 
     right: 170px; 
+    z-index: 0; 
+    padding: 30px; 
+
+    /*Size*/
     width: 200px;
     height: 260px;
-    background-color: #fff2aa;  
-    border-radius: 25px;
-    z-index: 0; 
+
+    /*Styling*/
+    background-color: #fff2aa; 
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); 
-    padding: 30px; 
+    
+    /*Border*/
+    border-radius: 25px;
     border-style: dashed;
     border-width: 2.5px;
     border-color: white;
 }
 
-.background-box {
+.description-framing-box {
+    /*Layout*/
     position: absolute;
     top: 170px; 
     left: 90px; 
+    z-index: 0; 
+    padding: 30px; 
+
+    /*Size*/
     width: 650px; 
     height: 260px;
+
+    /*Styling*/
     background-color: #fff2aa;
-    border-radius: 25px; 
-    z-index: 0; 
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); 
-    padding: 30px; 
+
+    /*Border*/
+    border-radius: 25px; 
     border-style: dashed;
     border-width: 2.5px;
     border-color: white;
 }
 
-.box {
-    background-color: #fff2aa; 
-    border-radius: 18px;
-    padding: 0.1rem 1rem;  
-    text-align: center;
-    width: auto; 
-    max-width: 220px; 
+.name-box {
+    /*Styling*/
+    background-color: #fff2aa;
     box-shadow: 0 8px 7px rgba(0, 0, 0, 0.1); 
-    font-size: 13px;
+    
+    /*Border*/
+    border-radius: 18px;
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
+
+    /*Layout*/
+    padding: 0.1rem 1rem;  
+    text-align: center; 
     margin-bottom: 23px; 
     margin-top: 80px;
     margin-left: 90px;
     z-index: 1;
-    border-style: dashed;
-    border-width: 2.5px;
-    border-color: white;
+
+    /*Size*/
+    width: auto; 
+    max-width: 220px; 
+
+    /*Font*/
+    font-size: 13px; 
 }
 
-.box2 {
+.about-me-text-box {
     background-color: #fdf7d1;
     border-radius: 18px;
     padding: 0.1rem 1rem;  
@@ -235,11 +274,11 @@ h4 {
     display: none; /* hide extra framing on small screens */
   }
 
-  .background-box {
+  .description-framing-box {
     display: none; /* or adjust to wrap text if preferred */
   }
 
-  .box {
+  .name-box {
     margin: 1rem auto;
     max-width: 80%;
     font-size: 20px;
@@ -247,7 +286,7 @@ h4 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .box2 {
+  .about-me-text-box {
     margin: 1rem auto;
     max-width: 90%;
     font-size: 16px;
@@ -258,7 +297,7 @@ h4 {
     text-align: left;
   }
 
-  .background-box {
+  .description-framing-box {
     margin: 1rem auto;
     max-width: 100%;
     font-size: 16px;
@@ -303,9 +342,5 @@ h4 {
     overflow-wrap: break-word;
     flex: 1;
 }
- 
- 
 }
-
-
 </style>
