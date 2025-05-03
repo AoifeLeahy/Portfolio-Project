@@ -1,0 +1,10 @@
+import { E as attr, C as pop, z as push, P as stringify } from "../../../chunks/index.js";
+import { b as base } from "../../../chunks/paths.js";
+function _page($$payload, $$props) {
+  push();
+  $$payload.out += `<div class="cv-container svelte-1fl9h4a"><img${attr("src", `${stringify(base)}/picture.jpg`)} alt="Photo of Aoife" class="picture svelte-1fl9h4a"> <div class="description-framing-box svelte-1fl9h4a"></div> <div class="picture-box svelte-1fl9h4a"></div> <div class="picture-box2 svelte-1fl9h4a"></div> <div class="name-box svelte-1fl9h4a"><h1 class="svelte-1fl9h4a">Aoife Leahy</h1></div> <div class="about-me-text-box svelte-1fl9h4a"><p class="svelte-1fl9h4a">I am currently a student studying Interactive Digital Art and Design in SETU Carlow.</p> <p class="svelte-1fl9h4a">I love to create characters through animation and concept art. I thrive in bringing the characters to life through stories and background images. Art has always been a big part of my life and I am very passionate towards it.</p> <p class="svelte-1fl9h4a">In the past couple of years, I have started to design games and experiment with game mechanics. With this new skill obtained, I have been able to mix this with my art skills to create some visually pleasing games.</p> <p class="svelte-1fl9h4a">I am continuously learning new things by experimenting with different aspects of art. By doing this, I am constantly improving and making my performance strengthen.</p> <p class="svelte-1fl9h4a">This portfolio shows my past projects and gives a brief look into my ongoing journey.</p></div> <h2 class="svelte-1fl9h4a">You can find me below:</h2> <div class="contact-item svelte-1fl9h4a"><img${attr("src", `${stringify(base)}/gmail.png`)} alt="Gmail logo" class="logo1 svelte-1fl9h4a"> <h3 class="svelte-1fl9h4a">aoifeleahy.kk@gmail.com</h3></div> <div class="contact-item svelte-1fl9h4a"><img${attr("src", `${stringify(base)}/github.png`)} alt="Github logo" class="logo2 svelte-1fl9h4a"> <h4 class="svelte-1fl9h4a">https://github.com/AoifeLeahy</h4></div></div>`;
+  pop();
+}
+export {
+  _page as default
+};
