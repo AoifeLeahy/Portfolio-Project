@@ -173,21 +173,31 @@
 }
 
 .about-me-text-box {
+    /*Styling*/
     background-color: #fdf7d1;
-    border-radius: 18px;
+    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
+
+    /*Border*/
+    border-radius: 18px; 
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
+
+    /*Layout*/
     padding: 0.1rem 1rem;  
     text-align: center;
-    width: auto; 
-    max-width: 640px; 
-    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
-    font-size: 13px;
     margin-bottom: 30px; 
     margin-top: 20px;
     margin-left: 110px;
     z-index: 1;
-    border-style: dashed;
-    border-width: 2.5px;
-    border-color: white;
+
+    /*Size*/
+    width: auto; 
+    max-width: 640px; 
+    
+    /*Font*/
+    font-size: 13px;
+   
 }
 
 h1 {
@@ -196,8 +206,11 @@ h1 {
 }
 
 h2 {
+    /*Font*/
     font-weight: 600;
     font-size: 20px;
+
+    /*Layout*/
     margin-bottom: 20px;
     margin-left: 100px;
     text-align: left;
@@ -210,38 +223,55 @@ p {
 }
 
 .logo1 {
-    margin-top: 0px;
+    /*Size*/
     height: 50px;
     width: 70px;
+
+    /**Layout*/
+    margin-top: 0px;
     margin-left: -1000px;
 }
 
 h3 {
+    /*Text*/
     font-size: 23px;
     font-weight: 100;
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    /*Layout*/
     margin-top: -38px;
     margin-bottom: 0px;
     margin-left: 190px;
-    text-align: left;
+    
+    /*Size*/
     max-width: 90%;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    
 }
 
 .logo2 {
+    /*Layout*/
     margin-top: -50px; 
     margin-left: -2rem; 
+    margin-bottom: 100px;
+
+    /*Size*/
     height: 50px;  
     width: 70px;   
-    margin-bottom: 100px;
 }
 
 h4 {
+    /*Layout*/
     margin-top: -130px;
-    height: 50px;
-    width: 300px;
     margin-bottom: 100px;
     margin-left: 680px;
+
+    /*Size*/
+    height: 50px;
+    width: 300px;
+    
+    /*Text*/
     font-size: 23px;
     font-weight: 100;
 }
@@ -258,54 +288,82 @@ h4 {
   .picture,
   .picture-box,
   .picture-box2 {
+    /*Layout*/
     position: relative;
     top: auto;
     left: auto;
     right: auto;
     margin: 2.5rem auto;
+    padding: 0;
+
+    /*Size*/
     width: 150px;
     height: 190px;
-    padding: 0;
+
+    /*Styling*/
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
   }
 
   .picture-box,
   .picture-box2 {
-    display: none; /* hide extra framing on small screens */
+    display: none; 
   }
 
   .description-framing-box {
-    display: none; /* or adjust to wrap text if preferred */
+    display: none; 
   }
 
   .name-box {
+    /*Layout*/
     margin: 1rem auto;
-    max-width: 80%;
-    font-size: 20px;
     padding: 0.5rem 1rem;
+
+    /*Size*/
+    max-width: 80%;
+
+    /*Text*/
+    font-size: 20px;
+    
+    /*Styling*/
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
 
   .about-me-text-box {
+    /*Layout*/
     margin: 1rem auto;
-    max-width: 90%;
-    font-size: 16px;
     padding: 1rem;
+
+    /*Size*/
+    max-width: 90%;
+
+    /*Text*/
+    font-size: 16px;
+    text-align: left;
+    
+    /*Styling*/
     border-radius: 20px;
     background-color: #fdf7d1;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
+    
   }
 
   .description-framing-box {
+    /*Layout*/
     margin: 1rem auto;
-    max-width: 100%;
-    font-size: 16px;
     padding: 1rem;
+
+    /*Size*/
+    max-width: 100%;
+
+    /*Text*/
+    font-size: 16px;
+    text-align: left;
+
+    /*Styling*/    
     border-radius: 20px;
     background-color: #fdf7d1;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
+    
   }
 
   h2 {
@@ -321,11 +379,14 @@ h4 {
   }
 
   .contact-item {
+    /*Layout*/
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
     margin: 1rem auto;
+
+    /*Size*/
     max-width: 90%;
 }
 
@@ -338,7 +399,7 @@ h4 {
 .contact-item h3, .contact-item h4 {
     margin: 0;
     font-size: 20px;
-    word-break: break-word;  /* ensure long lines break */
+    word-break: break-word;  
     overflow-wrap: break-word;
     flex: 1;
 }

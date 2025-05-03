@@ -11,24 +11,35 @@
 
 <style>
     header {
+        /*Layout*/
         display: flex; 
-        background-color: rgb(93, 95, 164); 
-        color: rgb(255, 255, 255);
         padding: 0.5rem 1rem; 
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); 
         position: fixed; 
         top: 0; 
         left: 0;
         right: 0;
         z-index: 1000; 
+        margin: 0; 
+
+        /*Styling*/
+        background-color: rgb(93, 95, 164); 
+        color: rgb(255, 255, 255);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); 
+        box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
+        
+        /*Animation*/
+        transition: all 0.3s ease-in-out;
+        
+        /*Size*/
         width: 100%;
         box-sizing: border-box;
         min-height: 70px; 
-        margin: 0; 
+        
+        /*Border*/
         border: none; 
+
+        /*Text*/
         font-family: 'Italiana', serif;
-        box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
 
     }
    /* Larger screens */

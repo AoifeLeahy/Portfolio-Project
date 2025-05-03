@@ -55,7 +55,7 @@
         width: 80%;  
         max-width: 600px; 
         /*Layout*/
-        margin-bottom: 20px; /* Space between the first and second image */
+        margin-bottom: 20px; 
     }
 
     .cv_page2 {

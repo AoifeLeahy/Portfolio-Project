@@ -1,7 +1,7 @@
 <script>
     let isDropdownOpen = false; // Dropdown menu state (open/closed)
     import { base } from '$app/paths';
-    import { page } from '$app/stores'; // Import page store for route tracking
+    import { page } from '$app/stores'; 
     
     // Function to toggle the dropdown menu
     function toggleDropdown() {
@@ -17,7 +17,7 @@
 <!-- recieved help from warp when a page is active -->
    
 <nav class="nav">
-    <!-- Left side navigation with button links -->
+
     <div class="main-nav">
         <ul class="main-nav-links"> 
             <li><a href={base + '/'} class:active={$page.url.pathname === base || $page.url.pathname === '/'}>Home</a></li>
@@ -26,13 +26,11 @@
         </ul>
     </div>
 
-    <!-- Right side hamburger menu with dropdown -->
     <div class="dropdown-menu">
         <button class="hamburger-button" on:click={toggleDropdown} aria-label="Toggle menu" aria-expanded={isDropdownOpen}>
             ☰
         </button>
         
-        <!-- Dropdown content with animation -->
         <div class="dropdown-content" class:active={isDropdownOpen}>
             <a href={base + '/Animation_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/animation'}>Animation</a>
             <a href={base + '/Art_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/Art_page'}>Art</a>
@@ -42,20 +40,21 @@
 </nav>
 
 <style>
-    /* Base Navigation Styling */
     .nav {
+        /*Layout*/
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
         padding: 0;
         position: relative;
+        margin: 0 auto;
+
+        /*Size*/
+        width: 100%;
         min-height: 55px; 
         width: 100%; 
-        margin: 0 auto; 
     }
     
-    /* Left side navigation styling */
     .main-nav {
         display: flex;
         align-items: center;
@@ -74,16 +73,26 @@
     }
     
     .main-nav-links a {
+        /*Text*/
         color: rgb(0, 0, 0); 
         text-decoration: none;
         font-size: 18px;
         font-weight: 600;
+
+        /*Layout*/
         padding: 8px 16px;
+        display: block;
+
+        /*Border*/
         border-radius: 16px;
+
+        /*Animation*/
         transition: all 0.3s ease;
+
+        /*Styling*/
         background-color: #aebdd7; 
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-        display: block;
+        
     }
     
     .main-nav-links a:hover {
@@ -107,17 +116,29 @@
     }
     
     .hamburger-button {
+        /*Styling*/
         background: #aebdd7; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+
+        /*Border*/
         border: none;
+        border-radius: 12px;
+        border-radius: 4px;
+
+        /*Layout*/
         padding: 8px; 
+        z-index: 30;
+
+        /*Size*/
         width: 40px; 
         height: 40px; 
+
+        /*Animation*/
         transition: all 0.3s ease;
-        z-index: 30; 
-        border-radius: 4px; 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        
+        /*Text*/
         font-size: 18px;
-        border-radius: 12px;
+        
     }
     
     .hamburger-button:hover {
@@ -128,17 +149,26 @@
  
     /* Dropdown content styling */
     .dropdown-content {
+        /*Layout*/
         position: absolute;
         top: calc(100% + 10px); 
         right: 0;
-        width: 180px;
-        background-color: #ffee8b;
-        border-radius: 16px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
         overflow: hidden;
         z-index: 25;
-        max-height: 0;
         transform: translateY(-10px);
+
+        /*Size*/
+        width: 180px;
+        max-height: 0;
+
+        /*Styling*/
+        background-color: #ffee8b;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+
+        /*Border*/
+        border-radius: 16px;
+        
+        /*Animation*/
         transition: all 0.3s ease-in-out;
     }
     
@@ -152,13 +182,18 @@
     
     /* Dropdown content links */
     .dropdown-content a {
+        /*Layout*/
         display: block;
         padding: 12px 16px;
+
+        /*Text*/
         color: rgb(0, 0, 0);
         text-decoration: none;
         text-align: center;
         font-size: 16px;
         font-weight: 600;
+
+        /*Animation*/
         transition: background-color 0.2s ease;
     }
     

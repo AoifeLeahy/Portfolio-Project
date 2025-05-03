@@ -190,6 +190,9 @@ p {
 
 @media (max-width: 1268px) {
     
+   .description {
+    margin-top: 60px;
+   }
     .art-text-box {
         margin-top: 40rem;
     }
@@ -251,8 +254,8 @@ p {
 
     .art-background-box,
     .description-box {
-        width: 90vw;            /* Responsive width */
-        height: 300px;          /* Fixed equal height */
+        width: 90vw;           
+        height: 300px;          
         max-width: none;
     }
 

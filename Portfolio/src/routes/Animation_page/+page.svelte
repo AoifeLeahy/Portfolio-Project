@@ -85,7 +85,7 @@
 
     /*Styling*/
     box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
     background-color: #fff2aa;
 }
 
@@ -93,7 +93,7 @@
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 0px; /* Keep this at 0 to preserve initial placement */
+    margin-top: 0px; 
 }
 
 .art-and-description {
@@ -255,6 +255,8 @@ p {
 
     p {
         text-align: left;
+        margin-top: -2px;
+        padding-top: 2px;
     }
 
     @media (max-width: 522px) {

@@ -87,10 +87,10 @@
 	object-fit: cover;
 }
 
-/* Smaller screen tweaks */
+
 @media (max-width: 768px) {
 	.home-page {
-		padding: 1.5rem 1rem;
+		padding: 2.5rem 1rem;
 	}
 
 	.container {
