@@ -1,5 +1,6 @@
 <script> 
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     onMount(() => {
         console.log("About me Page Loaded");
@@ -9,7 +10,7 @@
 <div class="cv-container">
 
     <!-- svelte-ignore a11y_img_redundant_alt -->
-    <img src="/picture.jpg" alt="Photo of Aoife" class="picture"/>
+    <img src="{base}/picture.jpg" alt="Photo of Aoife" class="picture"/>
    
     <div class="description-framing-box"></div>
 
@@ -28,12 +29,12 @@
     </div>
      <h2>You can find me below:</h2> 
      <div class="contact-item">
-        <img src="/gmail.png" alt="Gmail logo" class="logo1" />
+        <img src="{base}/gmail.png" alt="Gmail logo" class="logo1" />
         <h3>aoifeleahy.kk@gmail.com</h3>
     </div>
     
     <div class="contact-item">
-        <img src="/github.png" alt="Github logo" class="logo2" />
+        <img src="{base}/github.png" alt="Github logo" class="logo2" />
         <h4>https://github.com/AoifeLeahy</h4>
     </div>
 </div>

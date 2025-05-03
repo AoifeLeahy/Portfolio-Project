@@ -1,6 +1,8 @@
 <script>
     let isDropdownOpen = false; // Dropdown menu state (open/closed)
+    // @ts-ignore
     import { base } from '$app/paths';
+    // @ts-ignore
     import { page } from '$app/stores'; 
     
     // Function to toggle the dropdown menu

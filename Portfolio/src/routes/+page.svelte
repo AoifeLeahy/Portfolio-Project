@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 
 	onMount(() => {
 		console.log("Home Page Loaded");
@@ -13,7 +14,7 @@
 		</div>
 
 		<div class="image-box">
-			<img src="/background.png" alt="Forest background" />
+			<img src="{base}/background.png" alt="Forest background" />
 		</div>
 	</div>
 </div>

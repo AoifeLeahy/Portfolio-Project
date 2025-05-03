@@ -1,5 +1,6 @@
 <script> 
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     onMount(() => {
         console.log("Art Page Loaded");
@@ -16,7 +17,7 @@
    
     <div class="art-and-description">
         <div class="art-background-box">
-            <img src="/art_1.png" alt="First artwork" class="art1"/>
+            <img src="{base}/art_1.png" alt="First artwork" class="art1"/>
         </div>
         <div class="description-box">
             <p>26-11-2024</p>
@@ -26,7 +27,7 @@
 
     <div class="art-and-description">
         <div class="art-background-box">
-            <img src="/art_2.png" alt="Second artwork" class="art2"/>
+            <img src="{base}/art_2.png" alt="Second artwork" class="art2"/>
         </div>
         <div class="description-box2">
             <p>25-09-2024</p>

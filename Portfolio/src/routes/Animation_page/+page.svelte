@@ -1,5 +1,6 @@
 <script> 
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     onMount(() => {
         console.log("Animation Page Loaded");
@@ -18,7 +19,7 @@
         <div class="art-background-box">
             <!-- svelte-ignore a11y_media_has_caption -->
             <video class="art1" controls>
-                <source src="UFO.mp4" type="video/mp4">
+                <source src="{base}/UFO.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -32,7 +33,7 @@
         <div class="art-background-box">
             <!-- svelte-ignore a11y_media_has_caption -->
             <video class="art2" controls>
-                <source src="walk.mp4" type="video/mp4">
+                <source src="{base}/walk.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>

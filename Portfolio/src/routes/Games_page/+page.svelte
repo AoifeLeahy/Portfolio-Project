@@ -1,5 +1,6 @@
 <script> 
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     onMount(() => {
         console.log("Games Page Loaded");
@@ -19,7 +20,7 @@
                     <a href = "https://codeberg.org/UI-Programming-24-25/Aoife_Leahy_C00296873-UI-Programming-Module-Project">Link to codeberg repository</a>
                     <p>Crown's End is a game that I created during my second year module UI Programming. The goal was to capture the crown to save the village from the current King. The game was created in Javascript, HTML and Css.  </p>
                 </div>
-                <img src="/game_1.png" alt="Game one" id="game-1-image"/>
+                <img src="{base}/game_1.png" alt="Game one" id="game-1-image"/>
             </div>
         </div>
     
@@ -30,7 +31,7 @@
                     <a href = "https://github.com/KenPowerClassroom/programming-project-semester-2-AoifeLeahy">Github Repository</a><br>
                     <p>Escape the Prison is a game made in C++ for the first year module Introduction to Object Orientated Programming. To win this game, you are playing as the prisoner and must avoid all the guards to collect the key and escape.  </p>
                 </div>
-                <img src="/game_2.png" alt="Game one" id="game-2-image" />
+                <img src="{base}/game_2.png" alt="Game one" id="game-2-image" />
             </div>
         </div>
     </div>
