@@ -1,6 +1,7 @@
 Student name: Aoife Leahy
 Student number: C00296873
 Lecturers: Libor Zachoval and Milu Phillip.
+Submission Date: 4/5/2025
 
 Notes:
 When doing my portfolio, I experienced problems with the way that each page looked. I started with coding and seeing it in Firefox, however this web was not working properly for me as some things didn't show up in the right places or at all. I then got some friends to look at it themselves on their computer to check if it was ok and received feedback. 
@@ -9,3 +10,6 @@ I have since fixed the problems that were showing up on other laptops and it sho
 
 Help:
 I received help from my friends Caoimhe O'Brien and Liam treacy and also my lecturer, Libor Zachoval for responsiveness. 
+
+Live Link:
+https://aoifeleahy.github.io/Portfolio-Project/
