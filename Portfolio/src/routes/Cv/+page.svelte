@@ -24,7 +24,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 5px;
         /**Size*/
         min-height: 100vh; 
     }

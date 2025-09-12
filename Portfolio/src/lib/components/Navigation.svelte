@@ -71,18 +71,19 @@
     }
     
     .main-nav-links li {
-        margin-right: 40px;
+        margin-right: clamp(20px, 4vw, 40px);
     }
     
     .main-nav-links a {
         /*Text*/
         color: rgb(0, 0, 0); 
         text-decoration: none;
-        font-size: 18px;
+        font-size: clamp(14px, 2vw, 18px);
         font-weight: 600;
+        white-space: nowrap;
 
         /*Layout*/
-        padding: 8px 16px;
+        padding: clamp(6px, 1.5vw, 10px) clamp(12px, 3vw, 18px);
         display: block;
 
         /*Border*/
@@ -125,21 +126,21 @@
         /*Border*/
         border: none;
         border-radius: 12px;
-        border-radius: 4px;
 
         /*Layout*/
-        padding: 8px; 
+        padding: clamp(6px, 1.5vw, 8px); 
         z-index: 30;
+        cursor: pointer;
 
         /*Size*/
-        width: 40px; 
-        height: 40px; 
+        width: clamp(36px, 8vw, 44px); 
+        height: clamp(36px, 8vw, 44px); 
 
         /*Animation*/
         transition: all 0.3s ease;
         
         /*Text*/
-        font-size: 18px;
+        font-size: clamp(16px, 3vw, 20px);
         
     }
     
@@ -160,7 +161,7 @@
         transform: translateY(-10px);
 
         /*Size*/
-        width: 180px;
+        width: clamp(160px, 30vw, 200px);
         max-height: 0;
 
         /*Styling*/
@@ -186,14 +187,15 @@
     .dropdown-content a {
         /*Layout*/
         display: block;
-        padding: 12px 16px;
+        padding: clamp(10px, 2vw, 14px) clamp(12px, 3vw, 18px);
 
         /*Text*/
         color: rgb(0, 0, 0);
         text-decoration: none;
         text-align: center;
-        font-size: 16px;
+        font-size: clamp(14px, 2.5vw, 16px);
         font-weight: 600;
+        white-space: nowrap;
 
         /*Animation*/
         transition: background-color 0.2s ease;
@@ -213,41 +215,156 @@
         background-color: rgba(255, 255, 255, 0.2);
     }
 
-    @media (max-width: 400px) {
+/* Large screens - enhance spacing */
+@media (min-width: 1200px) {
+    .main-nav-links li {
+        margin-right: 50px;
+    }
+    
+    .main-nav-links a {
+        font-size: 19px;
+        padding: 10px 20px;
+    }
+    
+    .hamburger-button {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+    
+    .dropdown-content {
+        width: 220px;
+    }
+}
+
+/* Medium tablets */
+@media (max-width: 768px) {
+    .nav {
+        padding: 8px;
+        min-height: 60px;
+    }
+    
+    .main-nav-links {
+        gap: 8px;
+    }
+    
+    .main-nav-links li {
+        margin-right: 15px;
+    }
+    
+    .main-nav-links a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    
+    .dropdown-content {
+        width: 160px;
+        top: calc(100% + 8px);
+    }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 600px) {
     .nav {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 2px;
-        
+        align-items: center;
+        padding: 8px;
+        gap: 12px;
     }
-
+    
+    .main-nav {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .dropdown-menu {
+        order: 1;
+        margin: 0;
+    }
+    
     .main-nav-links {
+        justify-content: center;
         flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 4px;
-        margin-top: 10px;
-        margin-bottom: -20px;
+        gap: 8px;
     }
-
+    
     .main-nav-links li {
         margin: 0;
     }
-
-    .main-nav-links a {
-        font-size: 17px;
-        padding: 6px 10px;
+    
+    .dropdown-content {
+        top: calc(100% + 5px);
+        right: 50%;
+        transform: translateX(50%) translateY(-10px);
+        width: 140px;
     }
+    
+    .dropdown-content.active {
+        transform: translateX(50%) translateY(0);
+    }
+}
 
+/* Mobile phones */
+@media (max-width: 480px) {
+    .nav {
+        padding: 6px;
+        min-height: 70px;
+    }
+    
+    .main-nav-links a {
+        font-size: 15px;
+        padding: 6px 10px;
+        border-radius: 12px;
+    }
+    
     .hamburger-button {
-        width: 36px;
-        height: 36px;
-        margin-top: 12px;
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+    
+    .dropdown-content {
+        width: 130px;
+        max-height: 180px;
+    }
+    
+    .dropdown-content a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 350px) {
+    .nav {
+        gap: 8px;
+        min-height: 65px;
+    }
+    
+    .main-nav-links {
+        gap: 4px;
+    }
+    
+    .main-nav-links a {
+        font-size: 13px;
+        padding: 5px 8px;
+        border-radius: 10px;
+    }
+    
+    .hamburger-button {
+        width: 34px;
+        height: 34px;
         font-size: 16px;
     }
-
+    
     .dropdown-content {
-        width: 100%;
-        width: 100px;
+        width: 120px;
+    }
+    
+    .dropdown-content a {
+        font-size: 13px;
+        padding: 6px 8px;
     }
 }
 

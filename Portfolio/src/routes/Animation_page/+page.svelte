@@ -54,7 +54,7 @@
     justify-content: flex-start; 
     align-items: center;
     margin-top: 0;
-    padding-top: 40px; 
+    padding-top: 5px; 
 
     /*Size*/
     min-height: 80vh;  
@@ -129,7 +129,7 @@
 .description-box {
     /*Size*/
     width: 500px;
-    height: 113px;
+    height: 133px;
 
     /*Styling*/
     background-color: #fdf7d1;

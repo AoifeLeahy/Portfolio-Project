@@ -40,13 +40,23 @@
 <style>
 
     p {
-        margin-left: 0.5rem;
-        font-size: 16px;
+        margin: clamp(0.4rem, 1.5vw, 0.8rem) 0;
+        font-size: clamp(13px, 2.2vw, 15px);
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        line-height: 1.4;
     }
 
     a{
-        margin-left: 0.5rem;
+        margin: clamp(0.2rem, 0.8vw, 0.4rem) 0;
+        font-size: clamp(13px, 2.2vw, 15px);
+        color: rgb(93, 95, 164);
+        text-decoration: underline;
+        font-weight: 500;
+    }
+    
+    a:hover {
+        color: rgb(73, 75, 144);
+        text-decoration: none;
     }
         
     .mainWrapper {
@@ -55,163 +65,216 @@
         justify-content: flex-start; 
         align-items: center;
         min-height: 80vh;  
-        gap: 10vh; 
-        padding-top: 40px;  
+        gap: clamp(2vh, 3vw, 4vh); 
+        padding-top: clamp(15px, 3vw, 30px);  
         text-align: center;
         margin-top: 0;
     }
     
     .titleBox {
         background-color: #fff2aa;
-        border-radius: 18px;
-        padding: 0.5rem 2rem;  
+        border-radius: clamp(6px, 1.5vw, 10px);
+        padding: clamp(0.4rem, 1.5vw, 0.75rem);  
         text-align: center;
-        margin-top: 4rem;
-        margin-bottom: 15rem;
+        margin: clamp(0.75rem, 2vw, 1.25rem) auto clamp(0.5rem, 1.5vw, 0.75rem);
         width: auto; 
-        max-width: 300px; 
-        box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2); 
-        font-size: 1rem;
+        max-width: clamp(130px, 25vw, 180px); 
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15); 
+        font-size: clamp(0.7rem, 1.5vw, 0.9rem);
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
         border-style: dashed;
-        border-width: 2.5px;
+        border-width: 1.5px;
         border-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: fit-content;
     }
 
     #gamesBoxes{
-        display: grid;
+        display: flex;
         flex-direction: column;
-        gap: 20rem;
-        margin-top: -100px; 
+        gap: clamp(1rem, 1vw, 4rem);
+        width: 100%;
+        max-width: min(900px, 90vw);
+        margin: 0 auto;
+        padding: 0 clamp(0.75rem, 2.5vw, 1.5rem);
     }
 
-    #game1Box{
-        margin-top: 20vh; 
-        display: grid;
+    #game1Box, #games2box{
+        width: 100%;
+        display: flex;
         flex-direction: column;
     }
 
     .text-box {
         /*color and text*/ 
         background-color: #fdf7d1;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
         text-align: left;
 
         /*Border-style */ 
-        border: 2.5px dashed white;
-        border-radius: 25px;
+        border: 2px dashed white;
+        border-radius: clamp(12px, 2.5vw, 18px);
 
         /*Layout, etc*/
-        width: fit-content;
+        flex: 1;
+        min-width: 0; /* Allows flex item to shrink below content size */
         height: fit-content;
-        max-width: 50rem;
-        padding: 0.5rem;
-        margin: 1.4rem;
+        max-width: none;
+        padding: clamp(0.75rem, 1.5vw, 1.25rem);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .background-box {
-        max-width: 100vh;
-        max-height: 60vh;
+        width: 100%;
+        max-width: min(900px, 85vw);
+        min-height: fit-content;
         background-color: #fff2aa;
-        border-radius: 25px;
-        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+        border-radius: clamp(12px, 2.5vw, 18px);
+        box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: row;
-        align-items: center;
-        margin-top: -250px;
+        align-items: stretch;
+        justify-content: space-between;
+        margin: clamp(0.75rem, 2.5vw, 1.5rem) auto;
+        padding: clamp(0.75rem, 1.5vw, 1.5rem);
         border-style: dashed;
-        border-width: 2.5px;
+        border-width: 2px;
         border-color: white;
-}
+        box-sizing: border-box;
+        gap: clamp(0.75rem, 2.5vw, 1.5rem);
+    }
 
     #game-1-image {
-        width: 50vh;
+        flex: 0 0 auto;
+        max-width: clamp(200px, 30vw, 320px);
+        width: 100%;
+        height: auto;
+        max-height: clamp(160px, 20vw, 240px);
         border-style: solid;
         border-color: rgb(58, 147, 76);
-        border-radius: 10px;
-        margin: 0.5rem;
-        height: 15rem;
-        width: 18.5rem;
+        border-radius: clamp(6px, 1.5vw, 10px);
+        border-width: clamp(1.5px, 0.4vw, 2.5px);
+        margin: 0;
+        object-fit: cover;
+        align-self: flex-start;
     }
 
     #game-2-image {
-        width: 50vh;
+        flex: 0 0 auto;
+        max-width: clamp(200px, 30vw, 320px);
+        width: 100%;
+        height: auto;
+        max-height: clamp(160px, 20vw, 240px);
         border-style: solid;
         border-color: rgb(58, 147, 76);
-        border-radius: 10px;
-        margin: 0.5rem;
-        height: 15rem;
-        width: 18.5rem;
+        border-radius: clamp(6px, 1.5vw, 10px);
+        border-width: clamp(1.5px, 0.4vw, 2.5px);
+        margin: 0;
+        object-fit: cover;
+        align-self: flex-start;
     }
 
 
     .title{
         font-weight: 600;
         font-family: 'Italiana', serif;
-        font-size: 17px;
+        font-size: clamp(16px, 2.8vw, 20px);
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
-}
+        margin: 0 0 clamp(0.4rem, 1.5vw, 0.8rem) 0;
+    }
 
 
 
-@media (max-width: 935px) {
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
     .background-box {
-        width: 80vh;
-        justify-content: center;
-        align-items: center;
+        max-width: 90vw;
+        gap: clamp(0.75rem, 1.8vw, 1.25rem);
     }
-
+    
     #game-1-image, #game-2-image {
-        width: 40vh;
+        max-width: clamp(180px, 28vw, 260px);
     }
 }
 
-
-@media (max-width: 752px) {
-
-.mainWrapper {
-    align-items: center; /* Ensures everything inside is centered */
+/* Tablets */
+@media (max-width: 768px) {
+    .background-box {
+        flex-direction: column;
+        align-items: center;
+        max-width: 85vw;
+        padding: clamp(1.25rem, 3.5vw, 1.75rem);
+        gap: clamp(0.75rem, 2.5vw, 1.25rem);
+    }
+    
+    .text-box {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+    
+    #game-1-image, #game-2-image {
+        max-width: clamp(200px, 55vw, 320px);
+        width: 100%;
+        align-self: center;
+    }
+    
+    #gamesBoxes {
+        gap: clamp(1.5rem, 4vw, 3rem);
+        padding: 0 clamp(0.4rem, 1.8vw, 0.8rem);
+    }
 }
 
-#gamesBoxes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 2rem;
-    padding: 1rem;
+/* Mobile phones */
+@media (max-width: 480px) {
+    .mainWrapper {
+        padding-top: 16px;
+        gap: clamp(1.5rem, 4vw, 2.5rem);
+    }
+    
+    .background-box {
+        max-width: 92vw;
+        padding: clamp(0.875rem, 2.5vw, 1.25rem);
+    }
+    
+    .text-box {
+        padding: clamp(0.625rem, 2.5vw, 0.875rem);
+        border-radius: clamp(10px, 2.5vw, 15px);
+    }
+    
+    #game-1-image, #game-2-image {
+        max-width: 100%;
+        max-height: clamp(150px, 35vw, 200px);
+        border-radius: clamp(5px, 1.8vw, 8px);
+    }
+    
+    .titleBox {
+        margin: clamp(0.25rem, 1.5vw, 0.75rem) auto clamp(0.25rem, 1vw, 0.5rem);
+    }
 }
 
-.background-box {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    max-width: 400px;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.text-box {
-    width: 80%;
-    max-width: 400px;
-    margin: 1rem auto;
-    margin-top: 20px;
-}
-
-#game-1-image,
-#game-2-image {
-    width: 80%;
-    max-width: 350px;
-    height: auto;
-    margin-top: 1rem;
-}
-
-.titleBox {
-    margin-bottom: 3rem;
-}
+/* Very small screens */
+@media (max-width: 350px) {
+    .background-box {
+        padding: clamp(0.75rem, 3vw, 1rem);
+        gap: clamp(0.75rem, 2vw, 1rem);
+        border-width: 2px;
+    }
+    
+    .text-box {
+        padding: clamp(0.5rem, 2vw, 0.75rem);
+        border-width: 2px;
+    }
+    
+    #game-1-image, #game-2-image {
+        max-height: clamp(150px, 35vw, 200px);
+        border-width: 2px;
+    }
 }
 
 

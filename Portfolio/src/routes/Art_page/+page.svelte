@@ -45,7 +45,7 @@
     flex-direction: column;
     justify-content: flex-start; 
     align-items: center;
-    padding-top: 40px;  
+    padding-top: 5px;  
     margin-top: 0; 
 
     /*Size*/
@@ -121,7 +121,7 @@
 .description-box, .description-box2 {
     /*Size*/
     width: 500px;
-    height: 113px;
+    height: 133px;
 
     /*Styling*/
     background-color: #fdf7d1;

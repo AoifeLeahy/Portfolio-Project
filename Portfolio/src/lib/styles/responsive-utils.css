@@ -1,0 +1,223 @@
+/* Responsive Utilities for Portfolio Project */
+
+/* Responsive text utilities */
+.text-responsive {
+    font-size: clamp(14px, 2.5vw, 18px);
+    line-height: 1.6;
+}
+
+.text-small {
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.text-large {
+    font-size: clamp(18px, 3vw, 24px);
+}
+
+.text-xl {
+    font-size: clamp(24px, 4vw, 32px);
+}
+
+/* Responsive spacing utilities */
+.spacing-xs {
+    padding: clamp(0.25rem, 1vw, 0.5rem);
+}
+
+.spacing-sm {
+    padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.spacing-md {
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.spacing-lg {
+    padding: clamp(2rem, 4vw, 3rem);
+}
+
+.spacing-xl {
+    padding: clamp(3rem, 5vw, 4rem);
+}
+
+/* Responsive margin utilities */
+.margin-xs {
+    margin: clamp(0.25rem, 1vw, 0.5rem);
+}
+
+.margin-sm {
+    margin: clamp(0.5rem, 2vw, 1rem);
+}
+
+.margin-md {
+    margin: clamp(1rem, 3vw, 2rem);
+}
+
+.margin-lg {
+    margin: clamp(2rem, 4vw, 3rem);
+}
+
+/* Responsive width utilities */
+.w-responsive {
+    width: min(100%, 1200px);
+    max-width: 90vw;
+}
+
+.w-container {
+    max-width: min(1200px, 90vw);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+/* Responsive gap utilities */
+.gap-sm {
+    gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.gap-md {
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+.gap-lg {
+    gap: clamp(2rem, 4vw, 3rem);
+}
+
+/* Responsive border radius */
+.border-responsive {
+    border-radius: clamp(8px, 2vw, 16px);
+}
+
+/* Show/hide utilities for different screen sizes */
+@media (min-width: 1200px) {
+    .hide-xl { display: none !important; }
+}
+
+@media (max-width: 1199px) {
+    .show-xl-only { display: none !important; }
+}
+
+@media (min-width: 768px) {
+    .hide-md { display: none !important; }
+}
+
+@media (max-width: 767px) {
+    .show-md-only { display: none !important; }
+    .hide-mobile { display: none !important; }
+}
+
+@media (min-width: 768px) {
+    .show-mobile-only { display: none !important; }
+}
+
+@media (max-width: 480px) {
+    .hide-sm { display: none !important; }
+}
+
+@media (min-width: 481px) {
+    .show-sm-only { display: none !important; }
+}
+
+/* Responsive flex utilities */
+.flex-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+@media (max-width: 768px) {
+    .flex-responsive {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Responsive grid utilities */
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+/* Responsive aspect ratio utilities */
+.aspect-square {
+    aspect-ratio: 1;
+}
+
+.aspect-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.aspect-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+/* Responsive image utilities */
+.img-responsive {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: clamp(8px, 2vw, 16px);
+    object-fit: cover;
+}
+
+/* Responsive button utilities */
+.btn-responsive {
+    padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 24px);
+    font-size: clamp(14px, 2.5vw, 18px);
+    border-radius: clamp(8px, 2vw, 16px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+
+/* Responsive card utilities */
+.card-responsive {
+    background: #fff2aa;
+    border: 2.5px dashed white;
+    border-radius: clamp(12px, 3vw, 20px);
+    padding: clamp(1rem, 3vw, 2rem);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card-responsive:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout containers */
+.layout-two-column {
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .layout-two-column {
+        flex-direction: column;
+    }
+}
+
+/* Responsive header spacing utility */
+.header-spacing {
+    padding-top: clamp(70px, 15vw, 100px);
+}
+
+/* Responsive centered content */
+.center-responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: calc(100vh - clamp(60px, 12vw, 80px));
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* Print styles */
+@media print {
+    .no-print { display: none !important; }
+    .header-spacing { padding-top: 0; }
+    .hide-print { display: none !important; }
+}

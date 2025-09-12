@@ -93,7 +93,7 @@
     justify-content: left;
     align-items: left;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 5px;
     position: relative;
 
     /*Size*/
@@ -126,14 +126,14 @@
 .description-framing-box {
     /*Layout*/
     position: absolute;
-    top: 170px; 
+    top: 150px; 
     left: 90px; 
     z-index: 0; 
     padding: 30px; 
 
     /*Size*/
-    width: 650px; 
-    height: 260px;
+    width: 680px; 
+    height: 380px;
 
     /*Styling*/
     background-color: #fff2aa;

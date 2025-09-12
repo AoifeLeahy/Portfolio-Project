@@ -27,9 +27,9 @@
 	align-items: center;
     /**Size*/ 
 	min-height: 100vh;
-	padding: 2rem;
+	padding: clamp(1rem, 3vw, 2rem);
 
-	background-color: rgb(244, 250, 255);
+	background-color: rgb(255, 255, 255);
 }
 
 .container {
@@ -37,10 +37,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
 
     /*Size*/
-	max-width: 1000px;
+	max-width: min(1200px, 90vw);
 	width: 100%;
 }
 
@@ -59,10 +59,16 @@
 .name-box {
     /**Font*/
 	font-family: 'Italiana', serif;
-	font-size: 22px;
+	font-size: clamp(18px, 3vw, 24px);
 
     /*Layout*/
 	margin: 0;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: clamp(80px, 15vw, 120px);
 
     /*Styling*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
@@ -70,16 +76,19 @@
 
 .image-box {
     /*Layout*/
-	padding: 1rem;
+	padding: clamp(0.75rem, 2vw, 1.25rem);
 
     /*Size*/
-	max-width: 450px;
+	max-width: min(500px, 45vw);
+    min-width: 280px;
 }
 
 .image-box img {
     /**Size*/
 	width: 100%;
-	max-height: 280px;
+	height: auto;
+	max-height: clamp(200px, 25vw, 320px);
+	min-height: 180px;
 
     /**Border*/
 	border-radius: 12px;
@@ -89,28 +98,120 @@
 }
 
 
-@media (max-width: 768px) {
-	.home-page {
-		padding: 2.5rem 1rem;
-	}
-
+/* Ultra-wide screens - maintain laptop aesthetic */
+@media (min-width: 1400px) {
 	.container {
-		flex-direction: column;
+		max-width: 1400px;
+		gap: 3rem;
 	}
-
-	.name-box, .image-box {
-		max-width: 90%;
+	
+	.name-box {
+		font-size: 28px;
+		padding: 2rem;
+	}
+	
+	.image-box {
+		max-width: 550px;
+		padding: 1.5rem;
+	}
+	
+	.image-box img {
+		max-height: 350px;
 	}
 }
 
-@media (max-width: 480px) {
-	.image-box img  {
-		max-height: 180px;
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+	.container {
+		gap: 1.5rem;
+	}
+	
+	.name-box {
+		font-size: clamp(16px, 2.5vw, 20px);
+		min-height: 100px;
+	}
+	
+	.image-box {
+		max-width: min(400px, 40vw);
+	}
+}
+
+/* Tablets - transition to stacked layout */
+@media (max-width: 768px) {
+	.home-page {
+		padding: clamp(1.5rem, 4vw, 2.5rem) 1rem;
 	}
 
 	.container {
 		flex-direction: column;
-        align-items: center;
+		gap: 1.5rem;
+		max-width: 95vw;
+	}
+
+	.name-box, .image-box {
+		max-width: 100%;
+		width: 100%;
+	}
+	
+	.name-box {
+		order: 1;
+		min-height: 80px;
+	}
+	
+	.image-box {
+		order: 2;
+		max-width: none;
+	}
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+	.home-page {
+		padding: 1rem 0.75rem;
+		min-height: calc(100vh - 60px); /* Account for header */
+	}
+	
+	.container {
+		gap: 1rem;
+		max-width: 100vw;
+		padding: 0 0.5rem;
+	}
+
+	.image-box img {
+		max-height: clamp(150px, 35vw, 200px);
+		min-height: 150px;
+	}
+
+	.name-box {
+		font-size: clamp(16px, 4vw, 18px);
+		padding: clamp(0.75rem, 3vw, 1rem);
+		min-height: 70px;
+	}
+	
+	.image-box {
+		padding: clamp(0.5rem, 2vw, 0.75rem);
+	}
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+	.name-box, .image-box {
+		border-width: 2px;
+	}
+	
+	.name-box {
+		font-size: 16px;
+		padding: 0.75rem 0.5rem;
+		min-height: 60px;
+	}
+	
+	.image-box {
+		padding: 0.5rem;
+	}
+	
+	.image-box img {
+		max-height: 140px;
+		min-height: 120px;
 	}
 }
 </style>
