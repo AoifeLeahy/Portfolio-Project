@@ -39,6 +39,10 @@
 
 <style>
 
+.title {
+    text-decoration: underline;
+}
+
     h1 {
     font-size: 32px;  
     font-weight: 600;  

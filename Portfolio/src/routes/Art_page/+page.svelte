@@ -20,7 +20,7 @@
             <img src="{base}/art_1.png" alt="First artwork" class="art1"/>
         </div>
         <div class="description-box">
-            <p>26-11-2024</p>
+            <p class="date">26-11-2024</p>
             <p class="description">This assignment consisted of designing and creating are own character. I then had to draw the character facing in different directions.</p>
         </div> 
     </div>
@@ -30,10 +30,31 @@
             <img src="{base}/art_2.png" alt="Second artwork" class="art2"/>
         </div>
         <div class="description-box2">
-            <p>25-09-2024</p>
+            <p class="date">25-09-2024</p>
             <p class="description">I had to draw rough sketches of a character created by me in different poses. I had to pick the best pose and then design and do a final piece.</p>
         </div> 
     </div>
+
+    <div class="art-and-description">
+        <div class="art-background-box">
+            <img src="{base}/loadingScreen.png" alt="Third artwork" class="art3"/>
+        </div>
+        <div class="description-box3">
+            <p class="date">31-03-2025</p>
+            <p class="description">I collaborated with a group from 4th Year IDAD to create some artwork for the game they had to create as part of their course. This is the loading screen I created for them.</p>
+        </div> 
+    </div>
+
+    <div class="art-and-description">
+        <div class="art-background-box">
+            <img src="{base}/Atlas.png" alt="Fourth artwork" class="art4"/>
+        </div>
+        <div class="description-box4">
+            <p class="date">25-04-2024</p>
+            <p class="description">I had to design artwork for a game I created in 1st year. I then had to put all the artwork on one .png to showcase everything I had designed.</p>
+        </div> 
+    </div>
+
 </div>
 
 
@@ -89,26 +110,29 @@ h1 {
 }
 
 .art-box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: clamp(1.5rem, 4vw, 3rem);
-    padding: 0 clamp(1rem, 3vw, 2rem);
-    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns */
+    grid-gap: clamp(1.5rem, 4vw, 3rem);
+    justify-items: center;
+    align-items: start; /* ensures boxes in row start at the top */
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
 }
 
 .art-and-description {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: clamp(1rem, 2.5vw, 2rem);
-    flex: 1;
-    min-width: 280px;
-    max-width: 500px;
+    justify-content: stretch;
+    height: 100%; 
 }
+
+/* Make the 3rd item go under the 1st column and the 4th go under the 2nd column */
+.art-and-description:nth-child(3),
+.art-and-description:nth-child(4) {
+    grid-column: auto;
+}
+
 
 .art-background-box {
     /*Size*/
@@ -134,7 +158,7 @@ h1 {
     margin: clamp(1rem, 2vw, 2rem) auto;
 }
 
-.description-box, .description-box2 {
+.description-box, .description-box2, .description-box3, .description-box4 {
     /*Size*/
     width: 90%;
     max-width: clamp(300px, 80vw, 500px);
@@ -161,7 +185,7 @@ h1 {
 
 
 
-.art1, .art2 {
+.art1, .art2, .art3, .art4 {
     /*Size*/
     width: 85%;
     height: 85%;
@@ -171,6 +195,10 @@ h1 {
 
     /*Border*/
     border-radius: 20px;
+}
+
+.date {
+    text-decoration: underline;
 }
 
 p {
@@ -191,7 +219,7 @@ p {
     /*Font*/
     font-family: 'Italiana', serif;
     font-size: 18px;
-    font-weight: 100;
+    font-weight: 600;
 
     /*Layout*/
     margin-top: 0px;
@@ -253,10 +281,11 @@ p {
         padding: 0 0.5rem;
     }
     
-    .art1, .art2 {
-        width: 95%;
-        height: auto;
+    .art1, .art2, .art3, .art4 {
+        width: 100%;
+        height: 100%;
         padding: clamp(0.5rem, 2vw, 1rem);
+        object-fit: contain;
     }
     
     p {
@@ -266,6 +295,20 @@ p {
         margin-top: clamp(0.25rem, 1vw, 0.5rem);
     }
 }
+@media (max-width: 450px) {
+    .art-box-container {
+       display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(1.5rem, 4vw, 2rem); 
+    }
+
+    .art-and-description {
+        width: 100%;
+        max-width: 95%;
+    }
+}
+
 
 /* Very small screens */
 @media (max-width: 350px) {

@@ -24,7 +24,7 @@
             </video>
         </div>
         <div class="description-box">
-            <p>07-11-2024</p>
+            <p class="date">07-11-2024</p>
             <p class="description">For this assignment, I had to design and create a spaceship and a city background. I then had to animate the spaceship to kidnap a person.</p>
         </div> 
     </div>
@@ -38,7 +38,7 @@
             </video>
         </div>
         <div class="description-box">
-            <p>03-12-2024</p>
+            <p class="date">03-12-2024</p>
             <p class="description">I had to take my character that I had already designed previously and animate it walking. The background was created by me also.</p>
         </div> 
     </div>
@@ -46,6 +46,10 @@
 
 
 <style>
+
+.date {
+    text-decoration: underline;
+}
 
 h1 {
     font-size: 32px;   
@@ -207,7 +211,7 @@ p {
 .description {
     /*Font*/
     font-family: 'Italiana', serif;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 18px;
 
     /*Layout*/
