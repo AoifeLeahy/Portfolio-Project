@@ -28,8 +28,8 @@
     /**Size*/ 
 	min-height: 100vh;
 	padding: clamp(1rem, 3vw, 2rem);
+	background-color: rgb(233, 243, 255);
 
-	background-color: rgb(255, 255, 255);
 }
 
 .container {
@@ -68,7 +68,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: clamp(80px, 15vw, 120px);
+    min-height: clamp(60px, 12vw, 100px);
 
     /*Styling*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
@@ -87,8 +87,8 @@
     /**Size*/
 	width: 100%;
 	height: auto;
-	max-height: clamp(200px, 25vw, 320px);
-	min-height: 180px;
+	max-height: clamp(150px, 20vw, 260px);
+	min-height: 140px;
 
     /**Border*/
 	border-radius: 12px;
@@ -128,7 +128,7 @@
 	
 	.name-box {
 		font-size: clamp(16px, 2.5vw, 20px);
-		min-height: 100px;
+		min-height: 80px;
 	}
 	
 	.image-box {
@@ -150,17 +150,23 @@
 
 	.name-box, .image-box {
 		max-width: 100%;
-		width: 100%;
+		width: 90%;
 	}
 	
 	.name-box {
 		order: 1;
-		min-height: 80px;
+		min-height: 60px;
+		width: 40%;
 	}
 	
 	.image-box {
 		order: 2;
 		max-width: none;
+		width: 60%;
+	}
+
+	.image-box img {
+		object-fit:scale-down;
 	}
 }
 
@@ -178,8 +184,8 @@
 	}
 
 	.image-box img {
-		max-height: clamp(150px, 35vw, 200px);
-		min-height: 150px;
+		max-height: clamp(120px, 30vw, 170px);
+		min-height: 120px;
 	}
 
 	.name-box {
@@ -202,7 +208,7 @@
 	.name-box {
 		font-size: 16px;
 		padding: 0.75rem 0.5rem;
-		min-height: 60px;
+		min-height: 50px;
 	}
 	
 	.image-box {
@@ -210,8 +216,8 @@
 	}
 	
 	.image-box img {
-		max-height: 140px;
-		min-height: 120px;
+		max-height: 110px;
+		min-height: 100px;
 	}
 }
 </style>

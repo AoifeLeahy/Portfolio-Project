@@ -23,7 +23,7 @@
         height: 100%;
         box-sizing: border-box;
         height: 100%;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(233, 243, 255);
         font-size: clamp(14px, 2.5vw, 18px);
         line-height: 1.6;
     }
@@ -65,9 +65,59 @@
     
     main {
         min-height: 100vh;
-        background-color: rgb(255, 255, 255);
-        padding-top: clamp(60px, 12vw, 80px); /* Account for fixed header */
+        background-color: rgb(233, 243, 255);
+        padding-top: clamp(55px, 8vw, 75px); /* Account for fixed header */
         position: relative;
+        box-sizing: border-box;
+    }
+    
+    /* Responsive main content padding to match header heights */
+    @media (min-width: 1600px) {
+        main {
+            padding-top: 95px;
+        }
+    }
+    
+    @media (min-width: 1200px) and (max-width: 1599px) {
+        main {
+            padding-top: 85px;
+        }
+    }
+    
+    @media (min-width: 900px) and (max-width: 1199px) {
+        main {
+            padding-top: 75px;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 899px) {
+        main {
+            padding-top: 70px;
+        }
+    }
+    
+    @media (min-width: 600px) and (max-width: 767px) {
+        main {
+            padding-top: 75px;
+        }
+    }
+    
+    @media (min-width: 480px) and (max-width: 599px) {
+        main {
+            padding-top: clamp(90px, 15vw, 120px); /* Taller for column layout */
+        }
+    }
+    
+    @media (min-width: 350px) and (max-width: 479px) {
+        main {
+            padding-top: clamp(85px, 14vw, 110px);
+        }
+    }
+    
+    @media (max-width: 349px) {
+        main {
+            padding-top: clamp(80px, 13vw, 100px);
+        }
     }
     
     /* Add smooth scrolling for better UX */

@@ -39,6 +39,12 @@
 
 <style>
 
+    h1 {
+    font-size: 32px;  
+    font-weight: 600;  
+    margin: 0;        
+}
+
     p {
         margin: clamp(0.4rem, 1.5vw, 0.8rem) 0;
         font-size: clamp(13px, 2.2vw, 15px);
@@ -73,17 +79,18 @@
     
     .titleBox {
         background-color: #fff2aa;
-        border-radius: clamp(6px, 1.5vw, 10px);
-        padding: clamp(0.4rem, 1.5vw, 0.75rem);  
+        border-radius: clamp(12px, 2vw, 18px);
+        padding: clamp(0.4rem, 1.5vw, 0.75rem) clamp(1.2rem, 3vw, 2rem);  
         text-align: center;
-        margin: clamp(0.75rem, 2vw, 1.25rem) auto clamp(0.5rem, 1.5vw, 0.75rem);
+        margin: clamp(0.75rem, 2vw, 1.25rem) auto clamp(1rem, 2.5vw, 2rem);
         width: auto; 
-        max-width: clamp(130px, 25vw, 180px); 
-        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15); 
-        font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+        max-width: clamp(200px, 40vw, 320px);
+        min-width: 150px;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+        font-size: clamp(0.8rem, 1.8vw, 1rem);
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
         border-style: dashed;
-        border-width: 1.5px;
+        border-width: 2.5px;
         border-color: white;
         display: flex;
         align-items: center;
@@ -154,7 +161,7 @@
         max-width: clamp(200px, 30vw, 320px);
         width: 100%;
         height: auto;
-        max-height: clamp(160px, 20vw, 240px);
+        max-height: clamp(140px, 18vw, 200px);
         border-style: solid;
         border-color: rgb(58, 147, 76);
         border-radius: clamp(6px, 1.5vw, 10px);
@@ -169,7 +176,7 @@
         max-width: clamp(200px, 30vw, 320px);
         width: 100%;
         height: auto;
-        max-height: clamp(160px, 20vw, 240px);
+        max-height: clamp(140px, 18vw, 200px);
         border-style: solid;
         border-color: rgb(58, 147, 76);
         border-radius: clamp(6px, 1.5vw, 10px);
@@ -249,7 +256,7 @@
     
     #game-1-image, #game-2-image {
         max-width: 100%;
-        max-height: clamp(150px, 35vw, 200px);
+        max-height: clamp(130px, 32vw, 180px);
         border-radius: clamp(5px, 1.8vw, 8px);
     }
     
@@ -260,6 +267,12 @@
 
 /* Very small screens */
 @media (max-width: 350px) {
+    .titleBox {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+        max-width: 90vw;
+    }
+    
     .background-box {
         padding: clamp(0.75rem, 3vw, 1rem);
         gap: clamp(0.75rem, 2vw, 1rem);
@@ -272,7 +285,7 @@
     }
     
     #game-1-image, #game-2-image {
-        max-height: clamp(150px, 35vw, 200px);
+        max-height: clamp(120px, 30vw, 160px);
         border-width: 2px;
     }
 }

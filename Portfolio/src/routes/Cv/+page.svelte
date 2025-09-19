@@ -17,6 +17,12 @@
 
 <style>
 
+    h1 {
+    font-size: 32px;   
+    font-weight: 600;  
+    margin: 0;         
+}
+
     .cv-container {
         /**Layout*/
         display: flex;

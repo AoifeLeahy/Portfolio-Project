@@ -27,33 +27,54 @@
         <p>I am continuously learning new things by experimenting with different aspects of art. By doing this, I am constantly improving and making my performance strengthen.</p>
         <p>This portfolio shows my past projects and gives a brief look into my ongoing journey.</p>
     </div>
-     <h2>You can find me below:</h2> 
-     <div class="contact-item">
-        <img src="{base}/gmail.png" alt="Gmail logo" class="logo1" />
-        <h3>aoifeleahy.kk@gmail.com</h3>
+    <div class="contact-section">
+        <h2>You can find me below:</h2> 
+        
+        <div class="contact-items-row">
+            <!-- Gmail (not clickable) -->
+            <div class="contact-item">
+                <img src="{base}/gmail.png" alt="Gmail logo" class="contact-logo" />
+                <span class="contact-text">aoifeleahy.kk@gmail.com</span>
+            </div>
+
+            <!-- LinkedIn (clickable) -->
+            <a href="https://www.linkedin.com/in/aoife-leahy-507760354" class="contact-item clickable" target="_blank" rel="noopener noreferrer">
+                <img src="{base}/linkedIn.webp" alt="LinkedIn logo" class="contact-logo" />
+                <span class="contact-text">www.linkedin.com/in/aoife-leahy-507760354</span>
+            </a>
+
+            <!-- GitHub (clickable) -->
+            <a href="https://github.com/AoifeLeahy" class="contact-item clickable" target="_blank" rel="noopener noreferrer">
+                <img src="{base}/github.png" alt="Github logo" class="contact-logo" />
+                <span class="contact-text">https://github.com/AoifeLeahy</span>
+            </a>
+        </div>
     </div>
-    
-    <div class="contact-item">
-        <img src="{base}/github.png" alt="Github logo" class="logo2" />
-        <h4>https://github.com/AoifeLeahy</h4>
-    </div>
+
 </div>
 <style>
 
+.contact-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
 
+.contact-item:focus {
+    outline: none;
+}
 
 .picture {
     /*Layout*/
     position: absolute;
-    top: 170px; 
-    right: 170px;  
+    top: clamp(120px, 12vw, 150px); 
+    right: clamp(100px, 12vw, 170px);  
     z-index: 2; 
-    padding: 30px; 
+    padding: clamp(20px, 3vw, 30px); 
     object-fit: cover;
 
     /*Size*/
-    width: 200px; 
-    height: 260px;
+    width: clamp(150px, 15vw, 200px); 
+    height: clamp(180px, 18vw, 210px);
 
     /*Border*/
     border-radius: 20px;
@@ -65,15 +86,15 @@
 .picture-box2 {
     /*Layout*/
     position: absolute;
-    top: 184px; 
-    right: 182px; 
+    top: clamp(134px, 13vw, 164px); 
+    right: clamp(112px, 13vw, 182px); 
     z-index: 1; 
-    padding: 30px; 
+    padding: clamp(20px, 3vw, 30px); 
     object-fit: cover; 
 
     /*Size*/
-    width: 175px; 
-    height: 230px;
+    width: clamp(130px, 14vw, 175px); 
+    height: clamp(155px, 16vw, 185px);
 
     /*Border*/
     border-radius: 20px;
@@ -103,14 +124,14 @@
 .picture-box {
     /*Layout*/
     position: absolute;
-    top: 170px; 
-    right: 170px; 
+    top: clamp(120px, 12vw, 150px); 
+    right: clamp(100px, 12vw, 170px); 
     z-index: 0; 
-    padding: 30px; 
+    padding: clamp(20px, 3vw, 30px); 
 
     /*Size*/
-    width: 200px;
-    height: 260px;
+    width: clamp(150px, 35vw, 200px);
+    height: clamp(180px, 18vw, 210px);
 
     /*Styling*/
     background-color: #fff2aa; 
@@ -126,14 +147,14 @@
 .description-framing-box {
     /*Layout*/
     position: absolute;
-    top: 150px; 
-    left: 90px; 
+    top: clamp(120px, 12vw, 150px); 
+    left: clamp(60px, 8vw, 90px); 
     z-index: 0; 
-    padding: 30px; 
+    padding: clamp(20px, 3vw, 30px); 
 
     /*Size*/
-    width: 680px; 
-    height: 380px;
+    width: clamp(500px, 60vw, 680px); 
+    height: clamp(260px, 48vw, 380px);
 
     /*Styling*/
     background-color: #fff2aa;
@@ -160,9 +181,9 @@
     /*Layout*/
     padding: 0.1rem 1rem;  
     text-align: center; 
-    margin-bottom: 23px; 
-    margin-top: 80px;
-    margin-left: 90px;
+    margin-bottom: clamp(15px, 2vw, 23px); 
+    margin-top: clamp(60px, 8vw, 80px);
+    margin-left: clamp(60px, 8vw, 90px);
     z-index: 1;
 
     /*Size*/
@@ -187,9 +208,9 @@
     /*Layout*/
     padding: 0.1rem 1rem;  
     text-align: center;
-    margin-bottom: 30px; 
-    margin-top: 20px;
-    margin-left: 110px;
+    margin-bottom: clamp(20px, 3vw, 30px); 
+    margin-top: clamp(15px, 2vw, 20px);
+    margin-left: clamp(80px, 10vw, 110px);
     z-index: 1;
 
     /*Size*/
@@ -223,58 +244,75 @@ p {
   
 }
 
-.logo1 {
-    /*Size*/
-    height: 50px;
-    width: 70px;
 
-    /**Layout*/
-    margin-top: 0px;
-    margin-left: -1000px;
+/* Contact Section Styles */
+.contact-section {
+    /*Layout*/
+    margin-top: 1rem;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-h3 {
+.contact-items-row {
+    /*Layout*/
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    /*Layout*/
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    max-width: 400px;
+    
+    /*Styling*/
+    background-color: #fff2aa; 
+    border-radius: 18px;
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: white;
+    
+    
+    transition: all 0.2s ease;
+}
+
+.contact-item.clickable {
+    cursor: pointer;
+}
+
+.contact-item.clickable:hover {
+    background-color: #fdf7d1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-logo {
+    /*Size*/
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    
+    /*Styling*/
+    object-fit: contain;
+}
+
+.contact-text {
     /*Text*/
-    font-size: 23px;
-    font-weight: 100;
-    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
     word-break: break-word;
     overflow-wrap: break-word;
-
-    /*Layout*/
-    margin-top: -38px;
-    margin-bottom: 0px;
-    margin-left: 190px;
-    
-    /*Size*/
-    max-width: 90%;
-    
-}
-
-.logo2 {
-    /*Layout*/
-    margin-top: -50px; 
-    margin-left: -2rem; 
-    margin-bottom: 100px;
-
-    /*Size*/
-    height: 50px;  
-    width: 70px;   
-}
-
-h4 {
-    /*Layout*/
-    margin-top: -130px;
-    margin-bottom: 100px;
-    margin-left: 680px;
-
-    /*Size*/
-    height: 50px;
-    width: 300px;
-    
-    /*Text*/
-    font-size: 23px;
-    font-weight: 100;
+    line-height: 1.4;
 }
 
 /* Responsiveness*/
@@ -299,7 +337,7 @@ h4 {
 
     /*Size*/
     width: 150px;
-    height: 190px;
+    height: 150px;
 
     /*Styling*/
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
@@ -370,39 +408,43 @@ h4 {
   h2 {
     margin: 1rem auto;
     font-size: 20px;
-    
+    text-align: center;
   }
 
-  .logo1,
-  .logo2 {
-    margin: 1rem auto;
-    text-align: left;
+  .contact-section {
+    padding: 0 20px;
+  }
+
+  .contact-items-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .contact-item {
     /*Layout*/
     display: flex;
     align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin: 1rem auto;
+    gap: 0.75rem;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 0.4rem;
 
     /*Size*/
-    max-width: 90%;
-}
+    max-width: 95%;
+    min-width: 280px;
+  }
 
-.contact-item img {
-    height: 40px;
-    width: 40px;
+  .contact-logo {
+    height: 35px;
+    width: 35px;
+    min-width: 35px;
     flex-shrink: 0;
-}
+  }
 
-.contact-item h3, .contact-item h4 {
-    margin: 0;
-    font-size: 20px;
-    word-break: break-word;  
-    overflow-wrap: break-word;
-    flex: 1;
-}
+  .contact-text {
+    font-size: 16px;
+  }
+
 }
 </style>
