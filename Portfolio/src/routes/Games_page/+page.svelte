@@ -16,11 +16,13 @@
             <div class="background-box">
                 <div class="text-box">
                     <p class="title">Crown's End</p>
-                    <a href = "https://ui-programming-24-25.codeberg.page/Aoife_Leahy_C00296873-UI-Programming-Module-Project/">Live link</a><br>
-                    <a href = "https://codeberg.org/UI-Programming-24-25/Aoife_Leahy_C00296873-UI-Programming-Module-Project">Link to codeberg repository</a>
                     <p>Crown's End is a game that I created during my second year module UI Programming. The goal was to capture the crown to save the village from the current King. The game was created in Javascript, HTML and Css.  </p>
                 </div>
-                <img src="{base}/game_1.png" alt="Game one" id="game-1-image"/>
+                <!-- svelte-ignore a11y_media_has_caption -->
+                <video class="art1" controls>
+                <source src="{base}/Crowns_end_recording.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             </div>
         </div>
     
@@ -28,10 +30,13 @@
             <div class="background-box">
                 <div class="text-box">
                     <p class="title">Escape the Prison</p>
-                    <a href = "https://github.com/KenPowerClassroom/programming-project-semester-2-AoifeLeahy">Github Repository</a><br>
                     <p>Escape the Prison is a game made in C++ for the first year module Introduction to Object Orientated Programming. To win this game, you are playing as the prisoner and must avoid all the guards to collect the key and escape.  </p>
                 </div>
-                <img src="{base}/game_2.png" alt="Game one" id="game-2-image" />
+                <!-- svelte-ignore a11y_media_has_caption -->
+                <video class="art2" controls>
+                <source src="{base}/escape_recording.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             </div>
         </div>
     </div>
@@ -56,18 +61,7 @@
         line-height: 1.4;
     }
 
-    a{
-        margin: clamp(0.2rem, 0.8vw, 0.4rem) 0;
-        font-size: clamp(13px, 2.2vw, 15px);
-        color: rgb(93, 95, 164);
-        text-decoration: underline;
-        font-weight: 500;
-    }
-    
-    a:hover {
-        color: rgb(73, 75, 144);
-        text-decoration: none;
-    }
+
         
     .mainWrapper {
         display: flex;
@@ -160,7 +154,7 @@
         gap: clamp(0.75rem, 2.5vw, 1.5rem);
     }
 
-    #game-1-image {
+    .art1 {
         flex: 0 0 auto;
         max-width: clamp(200px, 30vw, 320px);
         width: 100%;
@@ -175,7 +169,7 @@
         align-self: flex-start;
     }
 
-    #game-2-image {
+    .art2 {
         flex: 0 0 auto;
         max-width: clamp(200px, 30vw, 320px);
         width: 100%;
@@ -208,7 +202,7 @@
         gap: clamp(0.75rem, 1.8vw, 1.25rem);
     }
     
-    #game-1-image, #game-2-image {
+    .art1, .art2 {
         max-width: clamp(180px, 28vw, 260px);
     }
 }
@@ -229,7 +223,7 @@
         margin: 0;
     }
     
-    #game-1-image, #game-2-image {
+    .art1, .art2 {
         max-width: clamp(200px, 55vw, 320px);
         width: 100%;
         align-self: center;
@@ -258,7 +252,7 @@
         border-radius: clamp(10px, 2.5vw, 15px);
     }
     
-    #game-1-image, #game-2-image {
+    .art1, .art2 {
         max-width: 100%;
         max-height: clamp(130px, 32vw, 180px);
         border-radius: clamp(5px, 1.8vw, 8px);
@@ -288,7 +282,7 @@
         border-width: 2px;
     }
     
-    #game-1-image, #game-2-image {
+    .art1, .art2 {
         max-height: clamp(120px, 30vw, 160px);
         border-width: 2px;
     }

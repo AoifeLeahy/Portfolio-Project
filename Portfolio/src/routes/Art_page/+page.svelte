@@ -27,11 +27,11 @@
 
     <div class="art-and-description">
         <div class="art-background-box">
-            <img src="{base}/art_2.png" alt="Second artwork" class="art2"/>
+            <img src="{base}/Background_dingle.png" alt="Second artwork" class="art2"/>
         </div>
         <div class="description-box2">
-            <p class="date">25-09-2024</p>
-            <p class="description">I had to draw rough sketches of a character created by me in different poses. I had to pick the best pose and then design and do a final piece.</p>
+            <p class="date">20-10-2025</p>
+            <p class="description">I created this during a group project. This project consisted of making a game with a story prompt given by Animation Dingle. One of my roles was to create a background.</p>
         </div> 
     </div>
 
@@ -47,9 +47,39 @@
 
     <div class="art-and-description">
         <div class="art-background-box">
-            <img src="{base}/Atlas.png" alt="Fourth artwork" class="art4"/>
+            <img src="{base}/art_2.png" alt="Fourth artwork" class="art4"/>
         </div>
         <div class="description-box4">
+            <p class="date">25-09-2024</p>
+            <p class="description">I had to draw rough sketches of a character created by me in different poses. I had to pick the best pose and then design and do a final piece.</p>
+        </div> 
+    </div>
+
+    <div class="art-and-description">
+        <div class="art-background-box">
+            <img src="{base}/an phiast.png" alt="Fifth artwork" class="art5"/>
+        </div>
+        <div class="description-box5">
+            <p class="date">03-10-2025</p>
+            <p class="description">This character was designed by myself as part of a group project for Animation dingle. This character already exists as it was created by the Animation dingle team, however, I redesigned him in my own art style.</p>
+        </div> 
+    </div>
+
+    <div class="art-and-description">
+        <div class="art-background-box">
+            <img src="{base}/turn around.png" alt="Sixth artwork" class="art6"/>
+        </div>
+        <div class="description-box6">
+            <p class="date">05-10-2025</p>
+            <p class="description">Following the artwork beside this, I then had to pick the character design that I liked and fit the game the most and do a character turnaround.</p>
+        </div> 
+    </div>
+
+    <div class="art-and-description">
+        <div class="art-background-box">
+            <img src="{base}/Atlas.png" alt="Seventh artwork" class="art7"/>
+        </div>
+        <div class="description-box7">
             <p class="date">25-04-2024</p>
             <p class="description">I had to design artwork for a game I created in 1st year. I then had to put all the artwork on one .png to showcase everything I had designed.</p>
         </div> 
@@ -129,7 +159,10 @@ h1 {
 
 /* Make the 3rd item go under the 1st column and the 4th go under the 2nd column */
 .art-and-description:nth-child(3),
-.art-and-description:nth-child(4) {
+.art-and-description:nth-child(4),
+.art-and-description:nth-child(5),
+.art-and-description:nth-child(6),
+.art-and-description:nth-child(7) {
     grid-column: auto;
 }
 
@@ -158,7 +191,7 @@ h1 {
     margin: clamp(1rem, 2vw, 2rem) auto;
 }
 
-.description-box, .description-box2, .description-box3, .description-box4 {
+.description-box, .description-box2, .description-box3, .description-box4, .description-box5, .description-box6, .description-box7 {
     /*Size*/
     width: 90%;
     max-width: clamp(300px, 80vw, 500px);
@@ -185,7 +218,7 @@ h1 {
 
 
 
-.art1, .art2, .art3, .art4 {
+.art1, .art2, .art3, .art4, .art5, .art6, .art7 {
     /*Size*/
     width: 85%;
     height: 85%;
@@ -281,7 +314,7 @@ p {
         padding: 0 0.5rem;
     }
     
-    .art1, .art2, .art3, .art4 {
+    .art1, .art2, .art3, .art4, .art5, .art6, .art7 {
         width: 100%;
         height: 100%;
         padding: clamp(0.5rem, 2vw, 1rem);
