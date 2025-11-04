@@ -70,7 +70,7 @@
 		<div class="hero-content">
 			<h1 class="main-title">Aoife Leahy</h1>
 			<p class="subtitle">Creative Portfolio</p>
-			<p class="intro-text">Explore my artistic journey through three distinct creative mediums!</p>
+			<p class="intro-text">Explore my artistic journey through three unique forms of creative expression!</p>
 		</div>
 	</section>
 
@@ -101,7 +101,7 @@
 			<div class="category-preview animation-preview">
 				<div class="category-header">
 					<h2>✨ Animation</h2>
-					<p>Motion graphics & animated pieces</p>
+					<p>Animated pieces</p>
 				</div>
 				<div class="preview-images">
 					<div class="image-showcase">
