@@ -37,6 +37,7 @@
             <a href={base + '/Animation_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/animation'}>Animation</a>
             <a href={base + '/Art_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/Art_page'}>Art</a>
             <a href={base + '/Games_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/Games_page'}>Games</a>
+            <a href={base + '/Website_page'} on:click={closeDropdown} class:active={$page.url.pathname === base + '/Website_page'}>Websites</a>
         </div>
     </div>
 </nav>
@@ -186,7 +187,7 @@
     
     /* Dropdown content active state */
     .dropdown-content.active {
-        max-height: 200px;
+        max-height: 230px;
         opacity: 1;
         transform: translateY(0);
       
