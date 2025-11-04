@@ -8,24 +8,27 @@
 </script>
 
 <div class="cv-container">
+    <div class="content-wrapper">
+        <div class="text-section">
+            <div class="description-framing-box"></div>
+            <div class="name-box">
+                <h1>Aoife Leahy</h1>
+            </div>
+            <div class="about-me-text-box">
+                <p>I am currently a student studying Interactive Digital Art and Design in SETU Carlow. </p>
+                <p>I love to create characters through animation and concept art. I thrive in bringing the characters to life through stories and background images. Art has always been a big part of my life and I am very passionate towards it.</p>
+                <p>In the past couple of years, I have started to design games and experiment with game mechanics. With this new skill obtained, I have been able to mix this with my art skills to create some visually pleasing games.</p>
+                <p>I am continuously learning new things by experimenting with different aspects of art. By doing this, I am constantly improving and making my performance strengthen.</p>
+                <p>This portfolio shows my past projects and gives a brief look into my ongoing journey.</p>
+            </div>
+        </div>
 
-    <!-- svelte-ignore a11y_img_redundant_alt -->
-    <img src="{base}/picture.jpg" alt="Photo of Aoife" class="picture"/>
-   
-    <div class="description-framing-box"></div>
-
-    <div class="picture-box"></div>
-    <div class="picture-box2"></div>
-
-    <div class="name-box">
-        <h1>Aoife Leahy</h1>
-    </div>
-    <div class="about-me-text-box">
-        <p>I am currently a student studying Interactive Digital Art and Design in SETU Carlow. </p>
-        <p>I love to create characters through animation and concept art. I thrive in bringing the characters to life through stories and background images. Art has always been a big part of my life and I am very passionate towards it.</p>
-        <p>In the past couple of years, I have started to design games and experiment with game mechanics. With this new skill obtained, I have been able to mix this with my art skills to create some visually pleasing games.</p>
-        <p>I am continuously learning new things by experimenting with different aspects of art. By doing this, I am constantly improving and making my performance strengthen.</p>
-        <p>This portfolio shows my past projects and gives a brief look into my ongoing journey.</p>
+        <div class="picture-section">
+            <div class="picture-box"></div>
+            <div class="picture-box2"></div>
+            <!-- svelte-ignore a11y_img_redundant_alt -->
+            <img src="{base}/picture.jpg" alt="Photo of Aoife" class="picture"/>
+        </div>
     </div>
     <div class="contact-section">
         <h2>You can find me below:</h2> 
@@ -65,9 +68,7 @@
 
 .picture {
     /*Layout*/
-    position: absolute;
-    top: clamp(120px, 12vw, 150px); 
-    right: clamp(100px, 12vw, 170px);  
+    position: relative;
     z-index: 2; 
     padding: clamp(20px, 3vw, 30px); 
     object-fit: cover;
@@ -86,8 +87,8 @@
 .picture-box2 {
     /*Layout*/
     position: absolute;
-    top: clamp(134px, 13vw, 164px); 
-    right: clamp(112px, 13vw, 182px); 
+    top: 14px;
+    left: 12px;
     z-index: 1; 
     padding: clamp(20px, 3vw, 30px); 
     object-fit: cover; 
@@ -111,21 +112,48 @@
     /*Layout*/
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 5px;
-    position: relative;
 
     /*Size*/
-    min-height: 100vh; 
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    /*Layout*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: clamp(40px, 6vw, 60px);
+}
+
+.text-section {
+    /*Layout*/
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    max-width: 680px;
+}
+
+.picture-section {
+    /*Layout*/
+    position: relative;
+    flex-shrink: 0;
 }
 
 .picture-box {
     /*Layout*/
     position: absolute;
-    top: clamp(120px, 12vw, 150px); 
-    right: clamp(100px, 12vw, 170px); 
+    top: 0;
+    left: 0;
     z-index: 0; 
     padding: clamp(20px, 3vw, 30px); 
 
@@ -147,14 +175,12 @@
 .description-framing-box {
     /*Layout*/
     position: absolute;
-    top: clamp(120px, 12vw, 150px); 
-    left: clamp(60px, 8vw, 90px); 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 0; 
     padding: clamp(20px, 3vw, 30px); 
-
-    /*Size*/
-    width: clamp(500px, 60vw, 680px); 
-    height: clamp(260px, 48vw, 380px);
 
     /*Styling*/
     background-color: #fff2aa;
@@ -169,7 +195,7 @@
 
 .name-box {
     /*Styling*/
-    background-color: #fff2aa;
+    background-color: #fdf7d1;
     box-shadow: 0 8px 7px rgba(0, 0, 0, 0.1); 
     
     /*Border*/
@@ -182,8 +208,9 @@
     padding: 0.1rem 1rem;  
     text-align: center; 
     margin-bottom: clamp(15px, 2vw, 23px); 
-    margin-top: clamp(60px, 8vw, 80px);
-    margin-left: clamp(60px, 8vw, 90px);
+    margin-top: clamp(20px, 3vw, 30px);
+    margin-left: clamp(20px, 2vw, 30px);
+    align-self: flex-start;
     z-index: 1;
 
     /*Size*/
@@ -210,12 +237,12 @@
     text-align: center;
     margin-bottom: clamp(20px, 3vw, 30px); 
     margin-top: clamp(15px, 2vw, 20px);
-    margin-left: clamp(80px, 10vw, 110px);
+    margin-left: clamp(30px, 3vw, 40px);
+    margin-right: clamp(30px, 3vw, 40px);
     z-index: 1;
 
     /*Size*/
     width: auto; 
-    max-width: 640px; 
     
     /*Font*/
     font-size: 13px;
@@ -322,6 +349,17 @@ p {
     align-items: center;
     text-align: center;
     padding: 1rem;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .text-section,
+  .picture-section {
+    max-width: 90%;
   }
 
   .picture,
