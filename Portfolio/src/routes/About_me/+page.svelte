@@ -268,7 +268,18 @@ h2 {
 p {
     font-size: 16px;
     font-family: 'Italiana', serif;
-  
+}
+
+@media (min-width: 1246px) {
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+    
+    .text-section {
+        max-width: 800px;
+    }
 }
 
 
