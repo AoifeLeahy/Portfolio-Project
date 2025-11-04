@@ -427,7 +427,7 @@ p {
     /*Text*/
     font-size: 16px;
     text-align: left;
-    font--weight: 100;
+    font-weight: 100;
     
     /*Styling*/
     border-radius: 20px;
