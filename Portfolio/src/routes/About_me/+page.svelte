@@ -273,7 +273,7 @@ p {
 @media (min-width: 1246px) {
     p {
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 1.6;
     }
     
