@@ -6,9 +6,11 @@
 
     const slides = [
         'website_home.png',
-        'website_login.png',
+        'website_search.png',
+        'website_search_result.png',
         'website_learning.png',
         'website_options.png',
+        'website_login.png',
         'website_quiz.png'
     ];
 
@@ -19,8 +21,11 @@
     function prevSlide() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     }
-
    
+    onMount(() => {
+        currentSlide = 0; // Always start at Home
+    });
+
 </script>
 
 <div class="mainWrapper">
