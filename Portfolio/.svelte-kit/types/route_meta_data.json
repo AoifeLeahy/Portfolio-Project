@@ -1,0 +1,24 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/About_me": [
+		"src/routes/+layout.js"
+	],
+	"/Animation_page": [
+		"src/routes/+layout.js"
+	],
+	"/Art_page": [
+		"src/routes/+layout.js"
+	],
+	"/Cv": [
+		"src/routes/+layout.js"
+	],
+	"/Games_page": [
+		"src/routes/+layout.js"
+	],
+	"/Website_page": [
+		"src/routes/+layout.js"
+	]
+}
