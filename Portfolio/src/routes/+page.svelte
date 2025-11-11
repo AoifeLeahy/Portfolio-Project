@@ -85,14 +85,12 @@
 				</div>
 				<div class="preview-images">
 					<div class="image-showcase">
-						<img src="{base}/art_1.png" alt="Art piece 1" 
-							on:click={() => openModal(`${base}/art_1.png`, 'Art piece 1')}
-							class="clickable-image"
-						/>
-						<img src="{base}/Background_dingle.png" alt="Art piece 2" 
-							on:click={() => openModal(`${base}/Background_dingle.png`, 'Art piece 2')}
-							class="clickable-image"
-						/>
+						<button class="image-button" type="button" on:click={() => openModal(`${base}/art_1.png`, 'Art piece 1')} aria-label="Open preview: Art piece 1">
+							<img src="{base}/art_1.png" alt="Art piece 1" />
+						</button>
+						<button class="image-button" type="button" on:click={() => openModal(`${base}/Background_dingle.png`, 'Art piece 2')} aria-label="Open preview: Art piece 2">
+							<img src="{base}/Background_dingle.png" alt="Art piece 2" />
+						</button>
 					</div>
 				</div>
 			</div>
@@ -105,14 +103,12 @@
 				</div>
 				<div class="preview-images">
 					<div class="image-showcase">
-						<img src="{base}/animation_ss_1.png" alt="Animation preview" 
-							on:click={() => openModal(`${base}/animation_ss_1.png`, 'Animation preview')}
-							class="clickable-image"
-						/>
-						<img src="{base}/animation_ss_2.png" alt="Animation character" 
-							on:click={() => openModal(`${base}/animation_ss_2.png`, 'Animation character')}
-							class="clickable-image"
-						/>
+						<button class="image-button" type="button" on:click={() => openModal(`${base}/animation_ss_1.png`, 'Animation preview')} aria-label="Open preview: Animation preview">
+							<img src="{base}/animation_ss_1.png" alt="Animation preview" />
+						</button>
+						<button class="image-button" type="button" on:click={() => openModal(`${base}/animation_ss_2.png`, 'Animation character')} aria-label="Open preview: Animation character">
+							<img src="{base}/animation_ss_2.png" alt="Animation character" />
+						</button>
 					</div>
 				</div>
 			</div>
@@ -125,14 +121,12 @@
 				</div>
 				<div class="preview-images">
 					<div class="image-showcase">
-						<img src="{base}/game_1.png" alt="Game preview 1" 
-							on:click={() => openModal(`${base}/game_1.png`, 'Game preview 1')}
-							class="clickable-image"
-						/>
-						<img src="{base}/game_2.png" alt="Game preview 2" 
-							on:click={() => openModal(`${base}/game_2.png`, 'Game preview 2')}
-							class="clickable-image"
-						/>
+						<button class="image-button" type="button" on:click={() => openModal(`${base}/game_1.png`, 'Game preview 1')} aria-label="Open preview: Game preview 1">
+							<img src="{base}/game_1.png" alt="Game preview 1" />
+						</button>
+						<button class="image-button" type="button" on:click={() => openModal(`${base}/game_2.png`, 'Game preview 2')} aria-label="Open preview: Game preview 2">
+							<img src="{base}/game_2.png" alt="Game preview 2" />
+						</button>
 					</div>
 				</div>
 			</div>
@@ -303,17 +297,23 @@
 	transition: transform 0.3s ease;
 }
 
-.clickable-image {
+.image-button {
+	border: 0;
+	background: transparent;
+	padding: 0;
 	cursor: pointer;
 	position: relative;
+	border-radius: 12px;
 }
-
-.clickable-image:hover {
+.image-button:focus-visible {
+	outline: 3px solid rgb(93, 95, 164);
+	outline-offset: 2px;
+}
+.image-button:hover img {
 	transform: scale(1.05);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-.clickable-image:active {
+.image-button:active img {
 	transform: scale(1.02);
 }
 
